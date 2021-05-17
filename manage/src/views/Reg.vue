@@ -52,7 +52,7 @@ export default {
         callback();
       }
     };
-    var validateusername = (rule, value, callback) => {
+    // var validateusername = (rule, value, callback) => {
       // rule 校验规则
       // value 当前字段值
       // callback 回调函数,用于确定校验是否通过
@@ -67,7 +67,7 @@ export default {
       //       callback();
       //     }
       //   });
-    };
+    // };
     return {
       regData: {
         username: "",
