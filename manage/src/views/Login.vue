@@ -90,8 +90,12 @@ export default {
       //     username:'aaa1',
       //     password:'123456'
       // })
+<<<<<<< d7ba97fd36c49acb56b954524db97770e1332a6a
 >>>>>>> 项目完善
       // this.$router.push('/home');
+=======
+      this.$router.push('/home');
+>>>>>>> 项目完善
     },
     goto(path) {
       this.$router.push(path);
