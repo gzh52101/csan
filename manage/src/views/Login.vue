@@ -84,6 +84,13 @@ export default {
       //       });
       //   }
       // });
+<<<<<<< e2ca35a0b889425c3d97217730c747ec5082c6fb
+=======
+      // let res = this.$request.post(this.baseUrl,{
+      //     username:'aaa1',
+      //     password:'123456'
+      // })
+>>>>>>> 项目完善
       // this.$router.push('/home');
     },
     goto(path) {

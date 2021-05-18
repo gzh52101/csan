@@ -1,6 +1,6 @@
 import axios from 'axios';
 // http://112.74.35.224:8233/dl.php
-export const baseUrl = 'http://120.76.247.5:2003';
+export const baseUrl = 'http://112.74.35.224:8841/data/user/login';
 export const apiUrl = baseUrl + '/api';
 const request = axios.create({
     baseURL:apiUrl,
