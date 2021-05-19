@@ -1,8 +1,8 @@
 const express = require('express');
 const dataRuote=require('./src/ruoterdata')
 const app = express();
-
-app.all('*',(req,res,next)=>{
+app.use(express.urlencoded({extended: true}));
+app.use('*',(req,res,next)=>{
     res.header("Access-Control-Allow-Origin", "*");
     next()
 })

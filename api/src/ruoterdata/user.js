@@ -8,8 +8,9 @@ let data={dbteb:'user'}
 
 //登录
 router.post('/login', async (req, res) => {
-
-    res.send({ data: await filt(data, req.body), code: 200 })
+    let d=Object.keys(req.body);
+        d=JSON.parse(d[0]);
+    res.send({ data: await filt(data, d), code: 200 })
 })
 //注册
 router.post('/reg', async (req, res) => {

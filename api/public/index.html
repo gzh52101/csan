@@ -16,14 +16,16 @@ let xm =new XMLHttpRequest()
 let fdata=new FormData()
     let fl =document.querySelector('.f1')
     let but =document.querySelector('.but')
-    fl.onchange=function(){
-        let data ={a:121,b:4125}
-        console.log(fl.files[0])
-        fdata.append('fl',fl.files[0])
+    // fl.onchange=function(){
+        but.onclick=function(){
+        let data ={username:'aaa1',password:'123456'}
+        // console.log(fl.files[0])
+        // fdata.append('fl',fl.files[0])
 
-        fdata.append('name',data)
-        xm.open('post','http://112.74.35.224:5566/');
-        xm.send(fdata)
+        fdata.append('name',JSON.stringify(data))
+        xm.open('post','http://localhost:8841/data/user/login',true);
+        xm.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        xm.send(JSON.stringify(data))
             xm.onload=function(){
                 console.log(xm)
             }
