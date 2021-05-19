@@ -65,7 +65,7 @@
         </template>
       </el-table-column>
     </el-table>
-    <el-dialog title="Rem" width="40%" :visible.sync="dialogFormVisible">
+    <el-dialog title="Java" width="40%" :visible.sync="dialogFormVisible">
       <el-form :model="updateData">
         <el-form-item label="标题 :" :label-width="formLabelWidth">
           <el-input
@@ -139,7 +139,7 @@
 </template>
 <script>
 export default {
-  name: "Python",
+  name: "Java",
   data() {
     return {
       tableData: [

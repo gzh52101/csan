@@ -54,9 +54,9 @@ export default {
         password: [
           { required: true, message: "请输入密码", trigger: "change" },
           {
-            min: 6,
+            min: 4,
             max: 10,
-            message: "长度在 6 到 10 个字符",
+            message: "长度在 4 到 10 个字符",
             trigger: "blur",
           },
         ],
@@ -65,42 +65,50 @@ export default {
   },
   methods: {
     submitForm() {
-      // this.$refs.ruleForm.validate((valid) => {
-      //   console.log("valid", valid);
-      //   if (valid) {
-      //     const { username, password, vcode } = this.loginData;
-      //     this.$request
-      //       .post("/login", {
-      //         username,
-      //         password,
-      //       })
-      //       .then((data) => {
-      //         if (data.code === 200) {
-      //           this.$router.push("/mine");
-      //           localStorage.setItem('userInfo',JSON.stringify(data.data))
-      //         } else if (data.code === 401) {
-      //           this.$message.error("密码错误");
-      //         }
-      //       });
-      //   }
-      // });
-      // let res = this.$request.post(this.baseUrl,{
-      //     username:'aaa1',
-      //     password:'123456'
-      // })
+      this.$refs.ruleForm.validate((valid) => {
+        console.log("valid", valid);
+        if (valid) {
+          const { username, password } = this.loginData;
+          // this.$request
+          //   .post("/user/login", {
+          //     username,
+          //     password,
+          //   })
+          //   .then((data) => {
+          //     // if (data.code === 200) {
+          //     //   this.$router.push("/mine");
+          //     //   localStorage.setItem('managerInfo',JSON.stringify(data.data))
+          //     // } else if (data.code === 401) {
+          //     //   this.$message.error("密码错误");
+          //     // }
+          //     console.log(data);
+          //   });
+          let xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function (response) {
+              console.log(response)
+          };
+          xhr.open('post',"http://112.74.35.224:8841/data/user/login");
+          xhr.setRequestHeader(
+            "Content-Type",
+            "application/x-www-form-urlencoded"
+          );
+          xhr.send(JSON.stringify({
+            username:username,
+            password:password
+          }));
+        }
+      });
       // this.$router.push('/home');
     },
     goto(path) {
       this.$router.push(path);
     },
-    reset()
-    {
-      this.loginData.username ="";
-      this.loginData.password ="";
-    }
+    reset() {
+      this.loginData.username = "";
+      this.loginData.password = "";
+    },
   },
-  created() {
-  },
+  created() {},
 };
 </script>
 <style>

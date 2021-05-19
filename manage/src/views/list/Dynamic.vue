@@ -44,7 +44,7 @@
       </el-table-column>
       <el-table-column label="操作">
         <template slot-scope="scope">
-          <el-button size="mini" @click="handleEdit(scope.row.id, scope.row)"
+          <el-button type="success" plain size="mini" @click="handleEdit(scope.row.id, scope.row)"
             >编辑</el-button
           >
           <el-button
@@ -78,7 +78,7 @@
           ></el-input>
         </el-form-item>
         <el-form-item label="头像上传 :" :label-width="formLabelWidth">
-          <el-upload
+          <!-- <el-upload
             class="avatar-uploader"
             action="http://112.74.35.224:5566/"
             :show-file-list="false"
@@ -87,7 +87,7 @@
           >
             <img v-if="this.tempimgurl" :src="this.tempimgurl" class="avatar" />
             <i v-else class="el-icon-plus avatar-uploader-icon"></i>
-          </el-upload>
+          </el-upload> -->
         </el-form-item>
         <el-form-item label="地址 :" :label-width="formLabelWidth">
           <el-input
@@ -98,10 +98,10 @@
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
-        <el-button @click="dialogFormVisible = false">取 消</el-button>
+        <el-button @click="dialogFormVisible = false" size="mini">取 消</el-button>
         <el-button
           type="primary"
-          @click="handlesubmit(updateData.id, updateData.flag)"
+          @click="handlesubmit(updateData.id, updateData.flag)" size="mini"
           >确 定</el-button
         >
       </div>
@@ -221,24 +221,24 @@ export default {
       let res = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
       return res;
     },
-    handleAvatarSuccess(res, file) {
-      this.tempimgurl = URL.createObjectURL(file.raw);
-      console.log(res);
-      console.log(file);
-      // console.log(this.tempid);
-    },
-    beforeAvatarUpload(file) {
-      const isJPG = file.type === "image/jpeg";
-      const isLt2M = file.size / 1024 / 1024 < 2;
-      console.log(file);
-      if (!isJPG) {
-        this.$message.error("上传头像图片只能是 JPG 格式!");
-      }
-      if (!isLt2M) {
-        this.$message.error("上传头像图片大小不能超过 2MB!");
-      }
-      return isJPG && isLt2M;
-    },
+    // handleAvatarSuccess(res, file) {
+    //   this.tempimgurl = URL.createObjectURL(file.raw);
+    //   console.log(res);
+    //   console.log(file);
+    //   // console.log(this.tempid);
+    // },
+    // beforeAvatarUpload(file) {
+    //   const isJPG = file.type === "image/jpeg";
+    //   const isLt2M = file.size / 1024 / 1024 < 2;
+    //   console.log(file);
+    //   if (!isJPG) {
+    //     this.$message.error("上传头像图片只能是 JPG 格式!");
+    //   }
+    //   if (!isLt2M) {
+    //     this.$message.error("上传头像图片大小不能超过 2MB!");
+    //   }
+    //   return isJPG && isLt2M;
+    // },
     searchitem() {
       this.tableData = this.tableData.filter((item) => {
         return item.name == this.sreach;

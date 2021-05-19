@@ -20,14 +20,17 @@
             >
           </el-menu> -->
         <!-- </el-col> -->
-        <el-col :span="8">
-          <p style="line-height: 10px; color: #fff; font-size: 25px">
+        <el-col :span="16">
+          <p style="line-height: 10px; color: #fff; font-size: 25px;margin-left:10px">
             Alert管理系统
           </p>
         </el-col>
-        <el-col :span="16">
-          <p style="text-align: right; color: #fff"><span>chen</span>您好！</p>
+        <template>
+        <el-col :span="8" style="text-align:right">
+         <strong style="color:#fff;margin-right:5px; line-height: 60px">chen,欢迎使用</strong>
+          <el-button type="danger" plain size="mini">退出登录</el-button>
         </el-col>
+        </template>
       </el-row>
     </el-header>
     <el-container>
@@ -35,7 +38,7 @@
         <el-row style="width: 400px">
           <el-col :span="12" style="height: 800px; background-color: #545c64">
             <el-menu
-              default-active="2"
+              default-active="1"
               class="el-menu-vertical-demo"
               background-color="#545c64"
               text-color="#fff"
@@ -45,8 +48,9 @@
                 @click="goto(item.path)"
                 v-for="item in list"
                 :key="item.path"
+                :index="item.path"
               >
-                <i class="el-icon-menu"></i>
+                <i :class="item.icon"></i>
                 <span slot="title">{{ item.text }}</span>
               </el-menu-item>
             </el-menu>
@@ -65,58 +69,48 @@ export default {
   name: "App",
   data() {
     return {
-      // menu: [
-      //   {
-      //     path: "/home",
-      //     text: "首页",
-      //     name: "home",
-      //   },
-      //   {
-      //     path: "/mine",
-      //     text: "我的",
-      //     name: "mine",
-      //   },
-      // ],
       list: [
         {
           path: "/dynamic",
           text: "动态",
           name: "dynamic",
+          icon:"el-icon-s-operation"
         },
         {
           path: "/rem",
           text: "推荐",
           name: "rem",
+          icon:"el-icon-s-comment"
         },
         {
           path: "/java",
           text: "Java",
           name: "java",
+           icon:"el-icon-s-promotion"
         },
         {
           path: "/life",
           text: "程序人生",
           name: "life",
+           icon:"el-icon-s-shop"
         },
         {
           path: "/python",
           text: "python",
           name: "python",
+           icon:"el-icon-s-marketing"
         },
         {
           path: "/ai",
           text: "人工智能",
           name: "ai",
+           icon:"el-icon-s-data"
         },
         {
           path: "/user",
           text: "用户管理",
           name: "user",
-        },
-        {
-          path: "/manager",
-          text: "管理员",
-          name: "manager",
+           icon:"el-icon-menu"
         },
       ],
       currentpath: "/home",
@@ -136,9 +130,9 @@ export default {
       // }
       const url = this.currentpath+item;
       // console.log(url);
-      // if (this.$route.path !== item) {
-      // }
-      this.$router.push(url);
+      if (this.$route.path !== url) {
+        this.$router.push(url);
+      }
       // this.currentpath = item.path;
     },
   },
