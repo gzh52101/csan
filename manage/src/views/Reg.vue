@@ -110,8 +110,8 @@ export default {
   },
   methods: {
     submitForm() {
-      // const { username, password } = this.regData;
-      // const tim = (new Date()).getTime();
+      const { username, password } = this.regData;
+      const tim = (new Date()).getTime();
       // axios
       //   .post("http://112.74.35.224:8233/dl.php", {
       //     a: username,
