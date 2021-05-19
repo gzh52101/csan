@@ -3,6 +3,7 @@ const dataRuote=require('./src/ruoterdata')
 const app = express();
 
 app.all('*',(req,res,next)=>{
+    res.header("Access-Control-Allow-Origin", "*");
     next()
 })
 app.use(express.static('./public'));
