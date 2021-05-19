@@ -2,31 +2,48 @@ const express = require('express');
 const router = express.Router();
 // const login =require('./login')
 // const reg =require('./reg')
-const { filt,inse } = require('../db/mongo.js')
+const { filt,inse,froda } = require('../db/mongo.js')
 
 let data={dbteb:'user'}
 
 //登录
 router.post('/login', async (req, res) => {
-    let d=Object.keys(req.body);
-        d=JSON.parse(d[0]);
+    let us=froda(req.body)
+    if(us.username&&us.password){
+        let da =await filt(data, us)
+        res.send({ data:da , code: 200 })
+    }else{
+       res.send({code:401,msg:'格式错误',res:false})
+    }
     res.send({ data: await filt(data, d), code: 200 })
 })
 //注册
 router.post('/reg', async (req, res) => {
-    let data= { data: await filt(data, req.query), code: 200 }
-        await inse(data,req.body)
-    res.send('0')
-})
-router.post('/check', async (req, res) => {
-
-    let user=await filt(data, req.body)
-    if(user.length>0){
-        res.send({code: 200 ,msg:true})
-    }else{
-        res.send({code:200,msg:false})
-    }
+    // let data= { data: await filt(data, req.query), code: 200 }
+    let us=froda(req.body)
+         if(us.username&&us.password){
+             await inse(data,us)
+             res.send({code:200,msg:'注册成功',res:true})
+         }else{
+            res.send({code:401,msg:'格式错误',res:false})
+         }
+        
 })
 //查询用户是否存在
+router.post('/check', async (req, res) => {
+    let us=froda(req.body)
+    let user=await filt(data, froda(req.body))
+    if(us.username){
+        if(user.length>0){
+            res.send({code:200,msg:'用户已经存在',res:true})
+        }else{
+            res.send({code:200,msg:'用户不存在',res:false})
+        }
+        
+    }else{
+       res.send({code:401,msg:'格式错误'})
+    }
+})
+
 
 module.exports =router

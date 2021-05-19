@@ -3,8 +3,7 @@ const router = express.Router();
 const { filt } = require('../db/mongo.js')
 
 router.get('/', async (req, res) => {
-
-    data.dbteb = 'dataJava'
+    console.log("/ 5g")
 
     res.send({ data: await filt({
         dbteb:'data5g'
