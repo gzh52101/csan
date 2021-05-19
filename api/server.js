@@ -2,6 +2,9 @@ const express = require('express');
 const dataRuote=require('./src/ruoterdata')
 const app = express();
 
+app.all('*',(req,res,next)=>{
+    next()
+})
 app.use(express.static('./public'));
 
 app.use('/data',dataRuote)
