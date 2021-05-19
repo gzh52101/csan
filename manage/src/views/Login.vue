@@ -84,7 +84,11 @@ export default {
       //       });
       //   }
       // });
-      this.$router.push('/home');
+      // let res = this.$request.post(this.baseUrl,{
+      //     username:'aaa1',
+      //     password:'123456'
+      // })
+      // this.$router.push('/home');
     },
     goto(path) {
       this.$router.push(path);
