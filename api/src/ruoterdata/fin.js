@@ -15,7 +15,7 @@ router.post('/', async (req,res)=>{
         da.end=10
     }
     let fis=data.splice(da.init,da.end)
-    res.send(fis)
+    res.send({data:fis,code:200})
 })
 
 module.exports=router
