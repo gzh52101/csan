@@ -3,7 +3,7 @@ const router = express.Router();
 const { filt,remove,froda,update} = require('../db/mongo.js')
 
 router.get('/', async (req, res) => {
-    console.log('-----web')
+    console.log('-----web'+new Date())
     res.send({ data: await filt({
         dbteb:'dataWeb'
     }, req.query), code: 200 })
@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
 
 
 router.post('/set', async (req, res) => {
-    console.log('修改 web类数据')
+    console.log('修改 web类数据'+new Date())
     // froda(req.body)
     let dt=froda(req.body)
     if(dt.id){
@@ -31,7 +31,7 @@ router.post('/set', async (req, res) => {
 })
 
 router.post('/remove',async (req,res)=>{
-console.log('删除 web类数据')
+console.log('删除 web类数据'+new Date())
 let dt=froda(req.body)
 let data = await remove({
     dbteb:'dataWeb'

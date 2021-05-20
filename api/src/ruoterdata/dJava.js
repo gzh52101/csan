@@ -12,7 +12,7 @@ console.log("/ Java")
 })
 
 router.post('/set', async (req, res) => {
-        console.log('修改 Java类数据')
+        console.log('修改 Java类数据'+new Date())
         // froda(req.body)
         let dt=froda(req.body)
         if(dt.id){
@@ -32,7 +32,7 @@ router.post('/set', async (req, res) => {
 })
 
 router.post('/remove',async (req,res)=>{
-    console.log('删除 Java类数据')
+    console.log('删除 Java类数据'+new Date())
     let dt=froda(req.body)
     let data = await remove({
         dbteb:'dataJava'

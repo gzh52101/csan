@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/set', async (req, res) => {
-    console.log('修改 Python类数据')
+    console.log('修改 Python类数据'+new Date())
     // froda(req.body)
     let dt=froda(req.body)
     if(dt.id){
@@ -30,7 +30,7 @@ router.post('/set', async (req, res) => {
 })
 
 router.post('/remove',async (req,res)=>{
-    console.log('删除 Python类数据')
+    console.log('删除 Python类数据'+new Date())
     let dt=froda(req.body)
     let data = await remove({
         dbteb:'dataPython'

@@ -9,7 +9,7 @@ let data={dbteb:'user'}
 //登录
 router.post('/login', async (req, res) => {
     let us=froda(req.body)
-    
+    console.log('登录页面'+new Date())
     if(us.username&&us.password){
         // console.log(us)
         // console.log(await filt(data, us))
@@ -18,10 +18,11 @@ router.post('/login', async (req, res) => {
     }else{
        res.send({code:401,msg:'格式错误',res:false})
     }
-    res.send({ data: "da", code: 200 })
+    // res.send({ data: da, code: 200 })
 })
 //注册
 router.post('/reg', async (req, res) => {
+    console.log('注册页面'+new Date())
     // let data= { data: await filt(data, req.query), code: 200 }
     let us=froda(req.body)
          if(us.username&&us.password){
@@ -34,6 +35,7 @@ router.post('/reg', async (req, res) => {
 })
 //查询用户是否存在
 router.post('/check', async (req, res) => {
+    console.log('查找用户'+new Date())
     let us=froda(req.body)
     let user=await filt(data, froda(req.body))
     if(us.username){
