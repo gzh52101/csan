@@ -2,7 +2,7 @@ const MongoClient = require('mongodb').MongoClient;
 const ObjectId = require('mongodb').ObjectID;
 const bs = require('../js/miwei.js');
 
-let url = "mongodb://112.74.35.224:27017";
+let url = "mongodb://112.74.35.224:12138";
 function froda(e) {
     let d = Object.keys(e);
     d = JSON.parse(d[0]);
@@ -13,21 +13,6 @@ async function connect(e) {
     const cliend = await MongoClient.connect(url, { useUnifiedTopology: true });
     const db = cliend.db(e.dbName ? e.dbName : 'db2010')
     return { cliend, db }
-
-    // MongoClient.connect(url, async (err, clend)=>{
-    //     if (err) throw err;
-    //     // 链接数据库  
-    //     let db =  clend.db('forum');
-    //     //获取集合 表 user
-    //     let user = db.collection('user');
-    //     // 操作 mong
-
-    //     // 查询数据库
-    //     let data= await user.find().toArray()
-    //     console.log(data)
-    //     //关闭链接
-    //     clend.close();
-    // })
 }
 //查询 --单 或 多条
 async function filt(e, p) {
