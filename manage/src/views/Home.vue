@@ -27,14 +27,14 @@
         </el-col>
         <template>
         <el-col :span="8" style="text-align:right">
-         <strong style="color:#fff;margin-right:5px; line-height: 60px">chen,欢迎使用</strong>
-          <el-button type="danger" plain size="mini">退出登录</el-button>
+         <strong style="color:#fff;margin-right:5px; line-height: 60px">{{managerInfo.username}},欢迎使用</strong>
+          <el-button type="danger" plain size="mini" @click="logout">退出登录</el-button>
         </el-col>
         </template>
       </el-row>
     </el-header>
     <el-container>
-      <el-aside width="200px" style="overflow: hidden">
+      <el-aside width="150px" style="overflow: hidden">
         <el-row style="width: 400px">
           <el-col :span="12" style="height: 800px; background-color: #545c64">
             <el-menu
@@ -57,9 +57,8 @@
           </el-col>
         </el-row>
       </el-aside>
-      <el-main style="overflow: hidden">
-        <router-view></router-view>
-        <!-- main -->
+      <el-main style="height:800px; overflow: hidden;padding:10px">
+        <router-view style="height:800px; overflow: hidden"></router-view>
       </el-main>
     </el-container>
   </el-container>
@@ -89,9 +88,9 @@ export default {
            icon:"el-icon-s-promotion"
         },
         {
-          path: "/life",
+          path: "/Joachern",
           text: "程序人生",
-          name: "life",
+          name: "Joachern",
            icon:"el-icon-s-shop"
         },
         {
@@ -101,10 +100,16 @@ export default {
            icon:"el-icon-s-marketing"
         },
         {
-          path: "/ai",
-          text: "人工智能",
-          name: "ai",
+          path: "/5g",
+          text: "5G",
+          name: "5g",
            icon:"el-icon-s-data"
+        },
+        {
+          path: "/Web",
+          text: "Web",
+          name: "Web",
+           icon:"el-icon-info"
         },
         {
           path: "/user",
@@ -114,27 +119,25 @@ export default {
         },
       ],
       currentpath: "/home",
-      userInfo: null,
+      managerInfo: null,
     };
   },
   methods: {
     goto(item) {
-      // if (typeof item === "object") {
-      //   if (this.$route.path !== item.path) {
-      //     this.$route.push({ path: item.path });
-      //   }
-      // } else {
-      //   if (this.$route.path !== item) {
-      //     this.$router.push(item);
-      //   }
-      // }
       const url = this.currentpath+item;
-      // console.log(url);
       if (this.$route.path !== url) {
         this.$router.push(url);
       }
       // this.currentpath = item.path;
     },
+    logout()
+    {
+      this.$store.commit('manager/logout');
+      this.$router.push('/login');
+    }
+  },
+  created(){
+    this.managerInfo = this.$store.state.manager.managerInfo
   },
   components: {},
 };

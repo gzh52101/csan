@@ -3,7 +3,7 @@ export default {
     namespaced: true,
 
     state: {
-        JavaInfo:null,
+        WebInfo:null,
     },
     getters: {
 

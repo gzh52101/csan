@@ -143,7 +143,7 @@ export default {
   name: "Java",
   data() {
     return {
-      JavaInfo: null,
+      JoachernInfo: null,
       updateData: {
         _id: "",
         title: "",
@@ -161,7 +161,8 @@ export default {
   },
   computed: {
     getData() {
-      return this.$store.state.Java.JavaInfo || [];
+      console.log("xxx",this.$store.state.Joachern.JoachernInfo)
+      return this.$store.state.Joachern.JoachernInfo || [];
     },
   },
   methods: {
@@ -192,13 +193,13 @@ export default {
       console.log("id", id);
       if (flag == "update") {
         let payload = {
-          url: "http://112.74.35.224:8841/data/java/set",
+          url: "http://112.74.35.224:8841/data/Joachern/set",
           data: { id: id, set: tempitem },
           type: "post",
         };
         this.$store.dispatch("ajaxFrom", payload).then(
           (res) => {
-            this.getJavaData();
+            this.getJoachernData();
             console.log(res);
           },
           (err) => {
@@ -213,13 +214,13 @@ export default {
       } else if (flag == "add") {
         // this.JavaInfo.push(tempitem);
         let payload = {
-          url: "http://112.74.35.224:8841/data/java/inse",
+          url: "http://112.74.35.224:8841/data/Joachern/inse",
           data: tempitem,
           type: "post",
         };
         this.$store.dispatch("ajaxFrom", payload).then(
           (res) => {
-            this.getJavaData();
+            this.getJoachernData();
             console.log(res);
           },
           (err) => {
@@ -235,13 +236,13 @@ export default {
     },
     handleDelete(id) {
       let payload = {
-        url: "http://112.74.35.224:8841/data/java/remove",
+        url: "http://112.74.35.224:8841/data/Joachern/remove",
         data: {id:id},
         type: "post",
       };
       this.$store.dispatch("ajaxFrom",payload).then(
         (res) => {
-          this.getJavaData();
+          this.getJoachernData();
           console.log(res);
         },
         (err) => {
@@ -259,16 +260,17 @@ export default {
         return item.user_name == this.sreach;
       });
     },
-    getJavaData() {
+    getJoachernData() {
       let payload = {
-        url: "http://112.74.35.224:8841/data/java",
+        url: "http://112.74.35.224:8841/data/Joachern",
         data: {},
         type: "get",
       };
       this.$store.dispatch("ajaxFrom", payload).then(
         (res) => {
           let result = JSON.parse(res).data;
-          this.$store.state.Java.JavaInfo = result;
+          this.$store.state.Joachern.JoachernInfo = result;
+          // console.log(result);
         },
         (err) => {
           console.log(err);
@@ -277,7 +279,7 @@ export default {
     },
   },
   created() {
-    this.getJavaData();
+    this.getJoachernData();
   },
 };
 </script>

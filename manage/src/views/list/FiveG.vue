@@ -10,7 +10,7 @@
       ></el-input>
       <el-button type="primary" size="mini" @click="searchitem">查询</el-button>
     </div>
-    <el-table :data="tableData" stripe style="width: 100%">
+    <el-table :data="getData" stripe style="width: 100%">
       <el-table-column label="序号" width="60">
         <template slot-scope="scope">
           <span>{{ scope.$index + 1 }}</span>
@@ -23,28 +23,28 @@
       </el-table-column>
       <el-table-column label="用户名" width="120">
         <template slot-scope="scope">
-          <span>{{ scope.row.username }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column label="码龄" width="60">
-        <template slot-scope="scope">
-          <span>{{ scope.row.codetime }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column label="阅读量" width="80">
-        <template slot-scope="scope">
-          <span>{{ scope.row.read }}</span>
+          <span>{{ scope.row.user_name }}</span>
         </template>
       </el-table-column>
       <el-table-column label="内容" width="300">
         <template slot-scope="scope">
-          <span class="textshow">{{ scope.row.content }}</span>
+          <span class="textshow">{{ scope.row.desc }}</span>
         </template>
       </el-table-column>
-      <el-table-column label="上传时间" width="180">
+      <el-table-column label="评论量" width="80">
+        <template slot-scope="scope">
+          <span>{{ scope.row.comments }}</span>
+        </template>
+      </el-table-column>
+      <el-table-column label="浏览量" width="80">
+        <template slot-scope="scope">
+          <span class="textshow">{{ scope.row.views }}</span>
+        </template>
+      </el-table-column>
+      <el-table-column label="上传时间" width="200">
         <template slot-scope="scope">
           <i class="el-icon-time"></i>
-          <span>{{ scope.row.time }}</span>
+          <span>{{ formaTime(scope.row.shown_time * 1) }}</span>
         </template>
       </el-table-column>
       <el-table-column label="操作">
@@ -53,19 +53,19 @@
             type="success"
             plain
             size="mini"
-            @click="handleEdit(scope.row.id, scope.row)"
+            @click="handleEdit(scope.row._id, scope.row)"
             >编辑</el-button
           >
           <el-button
             size="mini"
             type="danger"
-            @click="handleDelete(scope.row.id, scope.row)"
+            @click="handleDelete(scope.row._id, scope.row)"
             >删除</el-button
           >
         </template>
       </el-table-column>
     </el-table>
-    <el-dialog title="AI" width="40%" :visible.sync="dialogFormVisible">
+    <el-dialog title="Java" width="40%" :visible.sync="dialogFormVisible">
       <el-form :model="updateData">
         <el-form-item label="标题 :" :label-width="formLabelWidth">
           <el-input
@@ -76,45 +76,45 @@
         </el-form-item>
         <el-form-item label="用户名 :" :label-width="formLabelWidth">
           <el-input
-            v-model="updateData.username"
+            v-model="updateData.user_name"
             autocomplete="off"
             style="width: 400px"
           ></el-input>
         </el-form-item>
         <el-form-item label="内容 :" :label-width="formLabelWidth">
           <el-input
-            v-model="updateData.content"
+            v-model="updateData.desc"
             autocomplete="off"
             style="width: 400px"
             type="textarea"
             :autosize="{ minRows: 2, maxRows: 6 }"
           ></el-input>
         </el-form-item>
+        <el-form-item label="评论量 :" :label-width="formLabelWidth">
+          <el-input
+            v-model="updateData.comments"
+            autocomplete="off"
+            style="width: 400px"
+          ></el-input>
+        </el-form-item>
+        <el-form-item label="浏览量 :" :label-width="formLabelWidth">
+          <el-input
+            v-model="updateData.views"
+            autocomplete="off"
+            style="width: 400px"
+          ></el-input>
+        </el-form-item>
         <el-form-item label="上传时间 :" :label-width="formLabelWidth">
           <div class="block">
             <span class="demonstration"></span>
             <el-date-picker
-              v-model="updateData.time"
+              v-model="updateData.shown_time"
               type="date"
               placeholder="选择日期"
               format="yyyy-MM-dd"
             >
             </el-date-picker>
           </div>
-        </el-form-item>
-        <el-form-item label="码龄 :" :label-width="formLabelWidth">
-          <el-input
-            v-model="updateData.codetime"
-            autocomplete="off"
-            style="width: 400px"
-          ></el-input>
-        </el-form-item>
-        <el-form-item label="阅读量 :" :label-width="formLabelWidth">
-          <el-input
-            v-model="updateData.read"
-            autocomplete="off"
-            style="width: 400px"
-          ></el-input>
         </el-form-item>
       </el-form>
       <div slot="footer" class="dialog-footer">
@@ -123,7 +123,7 @@
         >
         <el-button
           type="primary"
-          @click="handlesubmit(updateData.id, updateData.flag)"
+          @click="handlesubmit(updateData._id, updateData.flag)"
           size="mini"
           >确 定</el-button
         >
@@ -132,62 +132,38 @@
     <el-pagination
       background
       layout="prev, pager, next"
-      :total="tableData.length"
+      :total="getData.length"
+      :page-size="5"
       class="pagination"
     ></el-pagination>
   </div>
 </template>
 <script>
 export default {
-  name: "Ai",
+  name: "Java",
   data() {
     return {
-      tableData: [
-        {
-          id: 1,
-          title: "删库跑路sping工程师的常见操作",
-          username: "JavaEdge",
-          content:
-            "前言:很多需要使用事务的场景，都只是在方法上直接添加个@Transactional注解",
-          time: "2021-5-13",
-          codetime: "5",
-          read: 152,
-        },
-        {
-          id: 2,
-          title: "删库跑路sping工程师的常见操作",
-          username: "chen",
-          content:
-            "前言:很多需要使用事务的场景，都只是在方法上直接添加个@Transactional注解",
-          time: "2021-5-13",
-          codetime: "5",
-          read: 152,
-        },
-        {
-          id: 3,
-          title: "删库跑路sping工程师的常见操作",
-          username: "JavaEdge",
-          content:
-            "前言:很多需要使用事务的场景，都只是在方法上直接添加个@Transactional注解",
-          time: "2021-5-13",
-          codetime: "5",
-          read: 152,
-        },
-      ],
+      FiveGInfo: null,
       updateData: {
-        id: "",
+        _id: "",
         title: "",
-        username: "",
-        content: "",
-        time: "",
-        codetime: "",
-        read: "",
+        user_name: "",
+        desc: "",
+        comments: "",
+        views: "",
+        shown_time: "",
       },
       dialogFormVisible: false,
       formLabelWidth: "100px",
       tempimgurl: "",
       sreach: "",
     };
+  },
+  computed: {
+    getData() {
+      console.log("xxx",this.$store.state.FiveG.FiveGInfo)
+      return this.$store.state.FiveG.FiveGInfo || [];
+    },
   },
   methods: {
     handleadd() {
@@ -196,45 +172,61 @@ export default {
     },
     handleEdit(id, row) {
       this.dialogFormVisible = true;
-      this.updateData.id = id;
+      this.updateData._id = id;
       this.updateData.title = row.title;
-      this.updateData.username = row.username;
-      this.updateData.content = row.content;
-      this.updateData.time = row.time;
-      this.updateData.codetime = row.codetime;
-      this.updateData.read = row.read;
-
+      this.updateData.user_name = row.user_name;
+      this.updateData.desc = row.desc;
+      this.updateData.comments = row.comments;
+      this.updateData.views = row.views;
+      this.updateData.shown_time = this.formaTime(row.shown_time * 1);
       this.updateData.flag = "update";
     },
     handlesubmit(id, flag) {
       let tempitem = {
-        id: Math.random()*1000+1,
         title: this.updateData.title,
-        username: this.updateData.username,
-        content: this.updateData.content,
-        time: this.formaTime(new Date()),
-        codetime: this.updateData.codetime,
-        read: this.updateData.read,
+        user_name: this.updateData.user_name,
+        desc: this.updateData.desc,
+        comments: this.updateData.comments,
+        views: this.updateData.views,
+        shown_time: this.updateData.shown_time*1,
       };
+      console.log("id", id);
       if (flag == "update") {
-        this.tableData.map((item) => {
-          if (item.id == id) {
-            item.id = this.updateData.id;
-            item.title = this.updateData.title;
-            item.username = this.updateData.username;
-            item.content = this.updateData.content;
-            item.time = this.formaTime(this.updateData.time);
-            item.codetime = this.updateData.codetime;
-            item.read = this.updateData.read;
+        let payload = {
+          url: "http://112.74.35.224:8841/data/5g/set",
+          data: { id: id, set: tempitem },
+          type: "post",
+        };
+        this.$store.dispatch("ajaxFrom", payload).then(
+          (res) => {
+            this.getFiveGData();
+            console.log(res);
+          },
+          (err) => {
+            console.log(err);
           }
-        });
+        );
         // console.log(this.updateData);
-        console.log(id);
+        // console.log(id);
         for (let key in this.updateData) {
           this.updateData[key] = "";
         }
       } else if (flag == "add") {
-        this.tableData.push(tempitem);
+        // this.JavaInfo.push(tempitem);
+        let payload = {
+          url: "http://112.74.35.224:8841/data/5g/inse",
+          data: tempitem,
+          type: "post",
+        };
+        this.$store.dispatch("ajaxFrom", payload).then(
+          (res) => {
+            this.getFiveGData();
+            console.log(res);
+          },
+          (err) => {
+            console.log(err);
+          }
+        );
         for (let key in this.updateData) {
           this.updateData[key] = "";
         }
@@ -243,9 +235,20 @@ export default {
       this.dialogFormVisible = false;
     },
     handleDelete(id) {
-      this.tableData = this.tableData.filter((item) => {
-        return item.id != id;
-      });
+      let payload = {
+        url: "http://112.74.35.224:8841/data/5g/remove",
+        data: {id:id},
+        type: "post",
+      };
+      this.$store.dispatch("ajaxFrom",payload).then(
+        (res) => {
+          this.getFiveGData();
+          console.log(res);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
     },
     formaTime(time) {
       let d = new Date(time);
@@ -253,16 +256,36 @@ export default {
       return res;
     },
     searchitem() {
-      this.tableData = this.tableData.filter((item) => {
-        return item.username == this.sreach;
+      this.Python = this.Python.filter((item) => {
+        return item.user_name == this.sreach;
       });
     },
+    getFiveGData() {
+      let payload = {
+        url: "http://112.74.35.224:8841/data/5g",
+        data: {},
+        type: "get",
+      };
+      this.$store.dispatch("ajaxFrom", payload).then(
+        (res) => {
+          let result = JSON.parse(res).data;
+          this.$store.state.FiveG.FiveGInfo = result;
+          // console.log(result);
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+    },
+  },
+  created() {
+    this.getFiveGData();
   },
 };
 </script>
-<style>
+<style scoped>
 .pagination {
-  margin: 400px auto 0;
+  margin: 20px auto;
   text-align: center;
 }
 .textshow {
