@@ -15,7 +15,7 @@ router.post('/login', async (req, res) => {
     }else{
        res.send({code:401,msg:'格式错误',res:false})
     }
-    res.send({ data: await filt(data, d), code: 200 })
+    res.send({ data: await filt(data, da), code: 200 })
 })
 //注册
 router.post('/reg', async (req, res) => {
