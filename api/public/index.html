@@ -18,12 +18,12 @@ let fdata=new FormData()
     let but =document.querySelector('.but')
     // fl.onchange=function(){
         but.onclick=function(){
-        let data ={username:'aaa1',password:'123456'}
+        let data ={username:'5555',password:'123456'}
         // console.log(fl.files[0])
         // fdata.append('fl',fl.files[0])
 
-        fdata.append('name',JSON.stringify(data))
-        xm.open('post','http://localhost:8841/data/user/login',true);
+        // fdata.append('name',JSON.stringify(data))
+        xm.open('post','http://localhost:8841/data/Java/inse',true);
         xm.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xm.send(JSON.stringify(data))
             xm.onload=function(){

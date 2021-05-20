@@ -41,7 +41,10 @@ async function filt(e, p) {
 //增加
 async function inse(e, p) {
     let { cliend, db } = await connect(e)
+    // console.log(e,p)
     let data = db.collection(e.dbteb).insertOne(p)
+
+    return data
 }
 
 // 修改

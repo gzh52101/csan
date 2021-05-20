@@ -43,4 +43,14 @@ if(data.result.ok*1){
 // console.log(data)
 
 })
+
+router.post('/inse',async (req, res) => {
+    console.log('增加 Joachern类数据' + new Date())
+    let dt = froda(req.body)
+    let data=await inse({
+        dbteb: 'dataJoachern'
+    }, dt)
+    res.send({data:data.ops,code:200,res:true})
+})
+
 module.exports=router

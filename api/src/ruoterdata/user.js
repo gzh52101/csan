@@ -26,8 +26,8 @@ router.post('/reg', async (req, res) => {
     // let data= { data: await filt(data, req.query), code: 200 }
     let us=froda(req.body)
          if(us.username&&us.password){
-             await inse(data,us)
-             res.send({code:200,msg:'注册成功',res:true})
+             let data= await inse(data,us)
+             res.send({code:200,msg:'注册成功',res:true,data:data.ops})
          }else{
             res.send({code:401,msg:'格式错误',res:false})
          }

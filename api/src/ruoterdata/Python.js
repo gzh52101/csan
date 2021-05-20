@@ -43,4 +43,14 @@ router.post('/remove',async (req,res)=>{
     // console.log(data)
     
 })
+
+router.post('/inse',async (req, res) => {
+    console.log('增加 Python类数据' + new Date())
+    let dt = froda(req.body)
+    let data=await inse({
+        dbteb: 'dataPython'
+    }, dt)
+    res.send({data:data.ops,code:200,res:true})
+})
+
 module.exports=router
