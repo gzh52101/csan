@@ -27,7 +27,6 @@
       <el-form-item>
         <el-button type="primary" @click="submitForm">提交</el-button>
         <el-button @click="reset">重置</el-button>
-        <el-button type="text" @click="goto('/reg')">立即注册</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -69,36 +68,24 @@ export default {
         console.log("valid", valid);
         if (valid) {
           const { username, password } = this.loginData;
-          // this.$request
-          //   .post("/user/login", {
-          //     username,
-          //     password,
-          //   })
-          //   .then((data) => {
-          //     // if (data.code === 200) {
-          //     //   this.$router.push("/mine");
-          //     //   localStorage.setItem('managerInfo',JSON.stringify(data.data))
-          //     // } else if (data.code === 401) {
-          //     //   this.$message.error("密码错误");
-          //     // }
-          //     console.log(data);
-          //   });
-          let xhr = new XMLHttpRequest();
-          xhr.onreadystatechange = function (response) {
-              console.log(response)
-          };
-          xhr.open('post',"http://112.74.35.224:8841/data/user/login");
-          xhr.setRequestHeader(
-            "Content-Type",
-            "application/x-www-form-urlencoded"
-          );
-          xhr.send(JSON.stringify({
-            username:username,
-            password:password
-          }));
+          this.ajaxFrom('http://112.74.35.224:8841/data/user/login',{ username, password },'post').then((res)=>{
+             let result = JSON.parse(res).data[0];
+             console.log(result);
+             this.$store.commit('manager/login',result)
+             if(this.$store.getters['manager/islogin'])
+             {
+                this.$router.push('/home');
+             }
+             else{
+               this.$message.error('密码或账号错误，请重新登录哟~');
+               this.reset();
+             }
+          },(err)=>{
+            console.log(err);
+          })
         }
       });
-      // this.$router.push('/home');
+
     },
     goto(path) {
       this.$router.push(path);
@@ -106,6 +93,27 @@ export default {
     reset() {
       this.loginData.username = "";
       this.loginData.password = "";
+    },
+    ajaxFrom(url,data,type) {
+      return new Promise((resolve, reject) => {
+        let xhr = new XMLHttpRequest();
+        xhr.open(type, url);
+        xhr.setRequestHeader(
+          "Content-Type",
+          "application/x-www-form-urlencoded"
+        );
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState !== 4) {
+            return;
+          }
+          if (xhr.status === 200) {
+            resolve(xhr.responseText);
+          } else {
+            reject(xhr.responseText);
+          }
+        };
+        xhr.send(JSON.stringify(data));
+      });
     },
   },
   created() {},

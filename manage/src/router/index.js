@@ -1,14 +1,13 @@
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Login from '../views/Login.vue';
-import List from '../views/List.vue';
 import Java from '../views/list/Java.vue'
 import Dynamic from '../views/list/Dynamic.vue';
 import Rem from '../views/list/Rem.vue';
-import User from '../views/list/User.vue';
 import Python from '../views/list/Python.vue';
-import Life from '../views/list/Life.vue';
-import Ai from '../views/list/Ai.vue';
+import Joachern from '../views/list/Joachern.vue';
+import FiveG from '../views/list/FiveG.vue';
+import Web from '../views/list/Web.vue';
 
 import Vue from 'vue';
 
@@ -45,10 +44,10 @@ const router = new VueRouter({
                     component: Java
                 },
                 {
-                    path: "user",
-                    text: "用户管理",
-                    name: "user",
-                    component: User
+                    path: "Web",
+                    text: "Web",
+                    name: "Web",
+                    component: Web
                 },
                 {
                     path: "python",
@@ -57,16 +56,16 @@ const router = new VueRouter({
                     component: Python
                 },
                   {
-                    path: "life",
+                    path: "Joachern",
                     text: "程序人生",
-                    name: "life",
-                    component:Life
+                    name: "Joachern",
+                    component:Joachern
                   },
                   {
-                    path: "ai",
-                    text: "人工智能",
-                    name: "ai",
-                    component:Ai
+                    path: "5g",
+                    text: "5G",
+                    name: "FiveG",
+                    component:FiveG
                   },
             ]
         },
@@ -75,10 +74,6 @@ const router = new VueRouter({
             name: 'login',
             component: Login
         },
-        {
-            path: '/list',
-            component: List,
-        }
     ]
 })
 
