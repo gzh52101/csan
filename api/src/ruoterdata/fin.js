@@ -4,7 +4,7 @@ const {fisor,froda}=require('../db/mongo.js')
 router.post('/', async (req,res)=>{
     
     let da=froda(req.body)
-    console.log(req)
+    console.log('/paging 分页'+ new Date())
     let data= await fisor({
         dbteb:da.dbteb
     })

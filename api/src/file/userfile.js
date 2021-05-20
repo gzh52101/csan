@@ -3,6 +3,7 @@ const multer = require('multer')
 const fs = require('fs')
 const path = require('path');
 const router = express.Router();
+
 // const app = express();
 // app.use(express.urlencoded({ extended: false }));
 let fname=''
@@ -12,6 +13,8 @@ let storage = multer.diskStorage({
     // 格式化文件名
     filename: function (req, file, cb) {
         console.log(req.query, '---------2');
+    
+        fname= req.query[Object.keys(req.query)] 
         // 获取文件后缀名
         let ext = path.extname(file.originalname);
         cb(null, Object.keys(req.query) + ext);
@@ -21,10 +24,9 @@ let storage = multer.diskStorage({
 // 设置文件保存目录
 let upload = multer({ storage })
 
-router.post('/', upload.fields({
-    
-}),upload.single('fl'),(req,res)=>{
-    console.log(req.body,'----------3')
+router.post('/',upload.single('fl'),(req,res)=>{
+
+    console.log(fname)
     res.send('0')
 })
 

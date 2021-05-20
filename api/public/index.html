@@ -18,15 +18,15 @@ let fdata=new FormData()
     let but =document.querySelector('.but')
     // fl.onchange=function(){
         but.onclick=function(){
-        let data ={dbteb:'dataPython',init:0,end:2}
+        // let data ={dbteb:'dataPython',init:0,end:2}
         // console.log(fl.files[0])
         fdata.append('fl',fl.files[0])
 
-        fdata.append('name',JSON.stringify(data))
-        xm.open('post','http://localhost:8841/data/paging',true);
-        xm.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        xm.send(JSON.stringify(data))
-        // xm.send(fdata)
+        // fdata.append('name',JSON.stringify(data))
+        xm.open('post','http://localhost:8841/file?233=111',true);
+        // xm.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        // xm.send(JSON.stringify(data))
+        xm.send(fdata)
             xm.onload=function(){
                 console.log(xm)
             }
