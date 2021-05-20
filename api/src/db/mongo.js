@@ -11,7 +11,7 @@ function froda(e) {
 
 async function connect(e) {
     const cliend = await MongoClient.connect(url, { useUnifiedTopology: true });
-    const db = cliend.db(e.dbName ? e.dbName : 'forum')
+    const db = cliend.db(e.dbName ? e.dbName : 'db2010')
     return { cliend, db }
 
     // MongoClient.connect(url, async (err, clend)=>{
