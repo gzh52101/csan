@@ -11,7 +11,7 @@ function froda(e) {
 
 async function connect(e) {
     const cliend = await MongoClient.connect(url, { useUnifiedTopology: true });
-    const db = cliend.db(e.dbName ? e.dbName : 'db2010')
+    const db = cliend.db(e.dbName ? e.dbName : 'db2101')
     return { cliend, db }
 }
 //查询 --单 或 多条

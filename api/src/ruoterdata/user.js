@@ -9,13 +9,16 @@ let data={dbteb:'user'}
 //登录
 router.post('/login', async (req, res) => {
     let us=froda(req.body)
+    
     if(us.username&&us.password){
+        // console.log(us)
+        // console.log(await filt(data, us))
         let da =await filt(data, us)
         res.send({ data:da , code: 200 })
     }else{
        res.send({code:401,msg:'格式错误',res:false})
     }
-    res.send({ data: da, code: 200 })
+    res.send({ data: "da", code: 200 })
 })
 //注册
 router.post('/reg', async (req, res) => {
