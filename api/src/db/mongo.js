@@ -87,6 +87,19 @@ async function remove(e,p){
     }
     return data
 }
+
+//分页
+
+async function fisor(e,p){
+
+    let { cliend, db } = await connect(e)
+    // console.log(e.dbteb)
+    let data= db.collection(e.dbteb).find().sort( { $natural: 1 } ).toArray()
+
+    return data
+}
+
+
 module.exports = {
-    filt, inse, froda, update,remove
+    filt, inse, froda, update,remove,fisor
 }

@@ -8,7 +8,9 @@ const Python =require('./Python')
 const Web =require('./Web')
 const Joachern =require('./Joachern')
 const user =require('./user')
+const paging =require('./fin')
 
+router.use('/paging',paging)
 
 router.use('/Java', Java)
 

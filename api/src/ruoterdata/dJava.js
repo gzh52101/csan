@@ -27,7 +27,7 @@ router.post('/set', async (req, res) => {
     } else {
         res.send({ code: 401, msg: '格式错误' })
     }
-    console.log(data.result)
+    // console.log(data.result)
 
 })
 

@@ -18,25 +18,19 @@ let fdata=new FormData()
     let but =document.querySelector('.but')
     // fl.onchange=function(){
         but.onclick=function(){
-        let data ={username:'5555',password:'123456'}
+        let data ={dbteb:'dataJava',init:0,end:2}
         // console.log(fl.files[0])
-        // fdata.append('fl',fl.files[0])
+        fdata.append('fl',fl.files[0])
 
-        // fdata.append('name',JSON.stringify(data))
-        xm.open('post','http://localhost:8841/data/Java/inse',true);
+        fdata.append('name',JSON.stringify(data))
+        xm.open('post','http://localhost:8841/data/paging',true);
         xm.setRequestHeader("Content-type","application/x-www-form-urlencoded");
         xm.send(JSON.stringify(data))
+        // xm.send(fdata)
             xm.onload=function(){
                 console.log(xm)
             }
     }
-    // let a={
-    //     a:'444',
-    //     b:444,
-    //     tim:'11'
-    // }
-
-    
     // xm.open('post','http://112.74.35.224:8233/dl.php');
     // xm.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     // xm.send(JSON.stringify(a))
