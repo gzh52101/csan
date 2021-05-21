@@ -3,7 +3,7 @@ const router = express.Router();
 const { filt, remove, froda, update, inse } = require('../db/mongo.js')
 
 router.get('/', async (req, res) => {
-    console.log("/ Java " + new Date())
+    console.log("/ Java__ " + new Date())
     res.send({
         data: await filt({
             dbteb: 'dataJava'
@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 })
 
 router.post('/set', async (req, res) => {
-    console.log('修改 Java类数据 ' + new Date())
+    console.log('修改 Java类数据_ ' + new Date())
     // froda(req.body)
     let dt = froda(req.body)
     if (dt.id) {
@@ -32,7 +32,7 @@ router.post('/set', async (req, res) => {
 })
 
 router.post('/remove', async (req, res) => {
-    console.log('删除 Java类数据' + new Date())
+    console.log('删除 Java类数据_ ' + new Date())
     let dt = froda(req.body)
     let data = await remove({
         dbteb: 'dataJava'
@@ -47,7 +47,7 @@ router.post('/remove', async (req, res) => {
 })
 
 router.post('/inse',async (req, res) => {
-    console.log('增加 Java类数据' + new Date())
+    console.log('增加 Java类数据 _' + new Date())
     let dt = froda(req.body)
     let data=await inse({
         dbteb: 'dataJava'

@@ -22,10 +22,10 @@ let fdata=new FormData()
         // console.log(fl.files[0])
         fdata.append('fl',fl.files[0])
         // fdata.append('name',JSON.stringify(data))
-        xm.open('post','http://localhost:8841/file?username=444&id=444444000',true);
+        xm.open('get','http://localhost:8841/data/all',true);
         // xm.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-        xm.send(JSON.stringify(data))
-        // xm.send(fdata)
+        // xm.send(JSON.stringify(data))
+        xm.send()
             xm.onload=function(){
                 console.log(xm)
             }

@@ -5,7 +5,7 @@ const bs = require('../js/miwei.js');
 let url = "mongodb://112.74.35.224:12138";
 function froda(e) {
     let d = Object.keys(e);
-    console.log(e,d,'----mongo')
+    // console.log(e,d,'----mongo')
     d = JSON.parse(d[0]);
     return d
 }
@@ -20,7 +20,7 @@ async function filt(e, p) {
 
     let { cliend, db } = await connect(e)
 
-    if (Object.keys(p).length > 0) {
+    if (p) {
 
         if (p.id) {
 
@@ -56,17 +56,17 @@ async function update(e, p) {
     if (p.id) {
 
         data = db.collection(e.dbteb).updateOne({
-             _id: ObjectId(p.id) 
-            }, 
+            _id: ObjectId(p.id)
+        },
             {
-                 $set: p.set 
+                $set: p.set
             })
-    }else if('user' in p){
+    } else if ('user' in p) {
         ///待定功能
-        let key1= p.user
-           
+        let key1 = p.user
+
         data = db.collection(e.dbteb).updateOne({
-            key1,$set:p.set
+            key1, $set: p.set
         })
     }
 
@@ -74,33 +74,33 @@ async function update(e, p) {
 }
 
 //删除
-async function remove(e,p){
+async function remove(e, p) {
     let { cliend, db } = await connect(e)
     let data
-    if(p.id){
-        data= db.collection(e.dbteb).deleteOne({
-            _id:ObjectId(p.id)
+    if (p.id) {
+        data = db.collection(e.dbteb).deleteOne({
+            _id: ObjectId(p.id)
         })
-    }else if(p.all){
-        data= db.collection(e.dbteb).deleteMany(p.remove)
-    }else{
-        data= db.collection(e.dbteb).deleteOne(p.remove)
+    } else if (p.all) {
+        data = db.collection(e.dbteb).deleteMany(p.remove)
+    } else {
+        data = db.collection(e.dbteb).deleteOne(p.remove)
     }
     return data
 }
 
 //分页
 
-async function fisor(e,p){
+async function fisor(e, p) {
 
     let { cliend, db } = await connect(e)
     // console.log(e.dbteb)
-    let data= db.collection(e.dbteb).find().sort( { $natural: 1 } ).toArray()
+    let data = db.collection(e.dbteb).find().sort({ $natural: 1 }).toArray()
 
     return data
 }
 
 
 module.exports = {
-    filt, inse, froda, update,remove,fisor
+    filt, inse, froda, update, remove, fisor
 }

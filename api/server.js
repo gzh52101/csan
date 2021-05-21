@@ -22,6 +22,7 @@ app.use(express.static('./public'));
 app.use('/data',dataRuote)
 
 app.use((req,res)=>{
+    
     res.send('<h1>你访问的页面不存在 404</h1>')
 })
 
