@@ -41,7 +41,6 @@ const store = new Vuex.Store({
                         reject(xhr.responseText);
                     }
                 };
-                console.log("data",data);
                 xhr.send(JSON.stringify(data));
             });
         },

@@ -132,9 +132,10 @@
     <el-pagination
       background
       layout="prev, pager, next"
-      :total="getData.length"
+      :total="gettotal"
       :page-size="5"
       class="pagination"
+      @current-change="pagechange"
     ></el-pagination>
   </div>
 </template>
@@ -157,11 +158,16 @@ export default {
       formLabelWidth: "100px",
       tempimgurl: "",
       sreach: "",
+      init: 0,
+      size: 5,
     };
   },
   computed: {
     getData() {
       return this.$store.state.Java.JavaInfo || [];
+    },
+    gettotal() {
+      return this.$store.state.Java.total || 0;
     },
   },
   methods: {
@@ -187,9 +193,8 @@ export default {
         desc: this.updateData.desc,
         comments: this.updateData.comments,
         views: this.updateData.views,
-        shown_time: this.updateData.shown_time*1,
+        shown_time: this.updateData.shown_time * 1,
       };
-      console.log("id", id);
       if (flag == "update") {
         let payload = {
           url: "http://112.74.35.224:8841/data/java/set",
@@ -199,19 +204,17 @@ export default {
         this.$store.dispatch("ajaxFrom", payload).then(
           (res) => {
             this.getJavaData();
+            this.getDatatotal();
             console.log(res);
           },
           (err) => {
             console.log(err);
           }
         );
-        // console.log(this.updateData);
-        // console.log(id);
         for (let key in this.updateData) {
           this.updateData[key] = "";
         }
       } else if (flag == "add") {
-        // this.JavaInfo.push(tempitem);
         let payload = {
           url: "http://112.74.35.224:8841/data/java/inse",
           data: tempitem,
@@ -220,6 +223,7 @@ export default {
         this.$store.dispatch("ajaxFrom", payload).then(
           (res) => {
             this.getJavaData();
+            this.getDatatotal();
             console.log(res);
           },
           (err) => {
@@ -236,12 +240,13 @@ export default {
     handleDelete(id) {
       let payload = {
         url: "http://112.74.35.224:8841/data/java/remove",
-        data: {id:id},
+        data: { id: id },
         type: "post",
       };
-      this.$store.dispatch("ajaxFrom",payload).then(
+      this.$store.dispatch("ajaxFrom", payload).then(
         (res) => {
           this.getJavaData();
+          this.getDatatotal();
           console.log(res);
         },
         (err) => {
@@ -260,24 +265,46 @@ export default {
       });
     },
     getJavaData() {
+      let { init, size } = this;
       let payload = {
-        url: "http://112.74.35.224:8841/data/java",
-        data: {},
-        type: "get",
+        url: "http://112.74.35.224:8841/data/paging",
+        data: { dbteb: "dataJava", init: init, end: size },
+        type: "post",
       };
       this.$store.dispatch("ajaxFrom", payload).then(
         (res) => {
-          let result = JSON.parse(res).data;
-          this.$store.state.Java.JavaInfo = result;
+          let result = JSON.parse(res);
+          this.$store.state.Java.JavaInfo = result.data;
         },
         (err) => {
           console.log(err);
         }
       );
     },
+    getDatatotal() {
+      let payload = {
+        url: "http://112.74.35.224:8841/data/Java",
+        data: {},
+        type: "get",
+      };
+      this.$store.dispatch("ajaxFrom", payload).then(
+        (res) => {
+          let result = JSON.parse(res);
+          this.$store.state.Java.total = result.data.length;
+        },
+        (err) => {
+          console.log(err);
+        }
+      );
+    },
+    pagechange(page) {
+      this.init = (page - 1) * this.size;
+      this.getJavaData();
+    },
   },
   created() {
     this.getJavaData();
+    this.getDatatotal();
   },
 };
 </script>

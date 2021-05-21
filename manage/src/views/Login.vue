@@ -44,9 +44,9 @@ export default {
         username: [
           { required: true, message: "请输入用户名", trigger: "change" },
           {
-            min: 4,
+            min: 3,
             max: 10,
-            message: "长度在 4 到 10 个字符",
+            message: "长度在 3 到 10 个字符",
             trigger: "blur",
           },
         ],
@@ -68,7 +68,7 @@ export default {
         console.log("valid", valid);
         if (valid) {
           const { username, password } = this.loginData;
-          this.ajaxFrom('http://112.74.35.224:8841/data/user/login',{ username, password },'post').then((res)=>{
+          this.ajaxFrom('http://112.74.35.224:8841/root',{ username, password },'post').then((res)=>{
              let result = JSON.parse(res).data[0];
              console.log(result);
              this.$store.commit('manager/login',result)

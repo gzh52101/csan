@@ -70,18 +70,6 @@ export default {
     return {
       list: [
         {
-          path: "/dynamic",
-          text: "动态",
-          name: "dynamic",
-          icon:"el-icon-s-operation"
-        },
-        {
-          path: "/rem",
-          text: "推荐",
-          name: "rem",
-          icon:"el-icon-s-comment"
-        },
-        {
           path: "/java",
           text: "Java",
           name: "java",
@@ -110,12 +98,6 @@ export default {
           text: "Web",
           name: "Web",
            icon:"el-icon-info"
-        },
-        {
-          path: "/user",
-          text: "用户管理",
-          name: "user",
-           icon:"el-icon-menu"
         },
       ],
       currentpath: "/home",

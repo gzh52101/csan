@@ -2,8 +2,6 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Login from '../views/Login.vue';
 import Java from '../views/list/Java.vue'
-import Dynamic from '../views/list/Dynamic.vue';
-import Rem from '../views/list/Rem.vue';
 import Python from '../views/list/Python.vue';
 import Joachern from '../views/list/Joachern.vue';
 import FiveG from '../views/list/FiveG.vue';
@@ -26,17 +24,6 @@ const router = new VueRouter({
             // 嵌套路由
             children: [
                 // {path:'',redirect:'dynamic'},
-                {
-                    path: 'dynamic',
-                    name: 'dynamic', // /list/some
-                    component: Dynamic
-                },
-                {
-                    path: "rem",
-                    text: "推荐",
-                    name: "rem",
-                    component: Rem
-                },
                 {
                     path: "java",
                     text: "Java",

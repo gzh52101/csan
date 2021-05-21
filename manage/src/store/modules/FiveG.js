@@ -4,6 +4,7 @@ export default {
 
     state: {
         FiveGInfo:null,
+        total:null
     },
     getters: {
 

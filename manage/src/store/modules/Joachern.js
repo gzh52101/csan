@@ -4,6 +4,7 @@ export default {
 
     state: {
         JoachernInfo:null,
+        total:null
     },
     getters: {
 
