@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { filt,remove,froda,update} = require('../db/mongo.js')
+const { filt,remove,froda,update,inse} = require('../db/mongo.js')
 
 router.get('/', async (req, res) => {
     console.log("/ 5g "+new Date())
