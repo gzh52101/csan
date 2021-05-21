@@ -35,7 +35,7 @@ router.post('/reg', async (req, res) => {
 })
 //查询用户是否存在
 router.post('/check', async (req, res) => {
-    console.log('查找用户'+new Date())
+    console.log('查找用户 '+new Date())
     let us=froda(req.body)
     let user=await filt(data, froda(req.body))
     if(us.username){
