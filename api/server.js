@@ -4,7 +4,7 @@ const app = express();
 const file =require('./src/file/userfile.js')
 const multer=require('multer')
 const fs =require('fs')
-
+const rootuser =require('./src/ruoterdata/rootuser')
 
 app.use(express.urlencoded({extended: true}));
 
@@ -15,6 +15,7 @@ app.use('*',(req,res,next)=>{
     next()
 })
 
+app.use('/root',rootuser)
 
 app.use(express.static('./public'));
 
