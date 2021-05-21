@@ -33,7 +33,7 @@ let storage = multer.diskStorage({
 // 设置文件保存目录
 let upload = multer({ storage })
 
-router.post('/',async (req,res,n)=>{
+router.post('/',(req,res,n)=>{
     console.log(req.query,'00---')
 
     if('username' in req.query){
@@ -43,8 +43,8 @@ router.post('/',async (req,res,n)=>{
         res.send({msg:'参数错误'})
     }
     
-},upload.single('fl'),(req,res)=>{
-
+},upload.single('fl'),async (req,res)=>{
+    await 
     console.log(fname)
     res.send({code:200,msg:'修改成功',res:true})
 })

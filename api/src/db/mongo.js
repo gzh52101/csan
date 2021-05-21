@@ -5,7 +5,7 @@ const bs = require('../js/miwei.js');
 let url = "mongodb://112.74.35.224:12138";
 function froda(e) {
     let d = Object.keys(e);
-    console.log(e,d)
+    console.log(e,d,'----mongo')
     d = JSON.parse(d[0]);
     return d
 }

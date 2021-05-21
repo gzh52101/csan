@@ -46,6 +46,7 @@ router.post('/remove',async (req,res)=>{
 
 router.post('/inse',async (req, res) => {
     console.log('增加 Python类数据' + new Date())
+    console.log(req.body,'inse-----body')
     let dt = froda(req.body)
     let data=await inse({
         dbteb: 'dataPython'

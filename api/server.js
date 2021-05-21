@@ -3,6 +3,7 @@ const dataRuote=require('./src/ruoterdata')
 const app = express();
 const file =require('./src/file/userfile.js')
 const multer=require('multer')
+const fs =require('fs')
 
 
 app.use(express.urlencoded({extended: true}));
@@ -18,6 +19,10 @@ app.use('*',(req,res,next)=>{
 app.use(express.static('./public'));
 
 app.use('/data',dataRuote)
+
+app.use((req,res)=>{
+    res.send('<h1>你访问的页面不存在 404</h1>')
+})
 
 app.listen(8841, () => {
     console.log('服务启动成功----8841  ' + new Date())
