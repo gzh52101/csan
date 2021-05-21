@@ -8,10 +8,10 @@ router.post('/', async (req,res)=>{
     let data= await fisor({
         dbteb:da.dbteb
     })
-    if('init' in da){
+    if(! 'init' in da){
         da.init=0
     }
-    if('den' in da){
+    if(! 'den' in da){
         da.end=10
     }
     let fis=data.splice(da.init,da.end)

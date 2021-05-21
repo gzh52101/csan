@@ -20,5 +20,5 @@ app.use(express.static('./public'));
 app.use('/data',dataRuote)
 
 app.listen(8841, () => {
-    console.log('服务启动成功----8841')
+    console.log('服务启动成功----8841  ' + new Date())
 })
