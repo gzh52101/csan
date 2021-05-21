@@ -4,6 +4,7 @@ export default {
 
     state: {
         JavaInfo:null,
+        total:null
     },
     getters: {
 

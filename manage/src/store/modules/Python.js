@@ -4,6 +4,7 @@ export default {
 
     state: {
         PythonInfo:null,
+        total:null
     },
     getters: {
 

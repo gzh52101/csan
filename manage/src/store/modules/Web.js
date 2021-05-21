@@ -4,6 +4,7 @@ export default {
 
     state: {
         WebInfo:null,
+        total:null
     },
     getters: {
 
