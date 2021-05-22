@@ -107,7 +107,7 @@ export default {
   },
   watch:{
     'managerInfo':function(n,o){
-      console.log(o);
+      // console.log(o);
       if(!n._id)
       {
         this.$router.push('/login');
