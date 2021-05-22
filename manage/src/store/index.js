@@ -6,6 +6,7 @@ import Joachern from './modules/Joachern'
 import Python from './modules/Python'
 import FiveG from './modules/FiveG'
 import Web from './modules/Web'
+import User from './modules/User'
 
 Vue.use(Vuex);
 
@@ -16,7 +17,8 @@ const store = new Vuex.Store({
         Joachern,
         Python,
         FiveG,
-        Web
+        Web,
+        User
     },
     actions: {
         ajaxFrom(context, {
