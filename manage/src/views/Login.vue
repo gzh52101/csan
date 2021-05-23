@@ -70,7 +70,7 @@ export default {
           const { username, password } = this.loginData;
           this.ajaxFrom('http://112.74.35.224:8841/root',{ username, password },'post').then((res)=>{
              let result = JSON.parse(res).data[0];
-             console.log(result);
+            //  console.log(result);
              this.$store.commit('manager/login',result)
              if(this.$store.getters['manager/islogin'])
              {

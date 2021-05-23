@@ -2,24 +2,6 @@
   <el-container>
     <el-header style="padding: 0; background-color: #545c64">
       <el-row :gutter="20">
-        <!-- <el-col :span="8"> -->
-        <!-- <el-menu
-            class="el-menu-demo"
-            mode="horizontal"
-            background-color="#545c64"
-            text-color="#fff"
-            active-text-color="#ffd04b"
-            router
-            :default-active="currentpath"
-          >
-            <el-menu-item
-              :index="item.path"
-              v-for="item in menu"
-              :key="item.name"
-              >{{ item.text }}</el-menu-item
-            >
-          </el-menu> -->
-        <!-- </el-col> -->
         <el-col :span="16">
           <p style="line-height: 10px; color: #fff; font-size: 25px;margin-left:10px">
             Alert管理系统
@@ -99,6 +81,12 @@ export default {
           name: "Web",
            icon:"el-icon-info"
         },
+        {
+          path: "/user",
+          text: "用户",
+          name: "user",
+           icon:"el-icon-s-custom"
+        },
       ],
       currentpath: "/home",
       managerInfo: null,
@@ -110,12 +98,20 @@ export default {
       if (this.$route.path !== url) {
         this.$router.push(url);
       }
-      // this.currentpath = item.path;
     },
     logout()
     {
       this.$store.commit('manager/logout');
       this.$router.push('/login');
+    }
+  },
+  watch:{
+    'managerInfo':function(n,o){
+      // console.log(o);
+      if(!n._id)
+      {
+        this.$router.push('/login');
+      }
     }
   },
   created(){

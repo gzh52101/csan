@@ -1,15 +1,6 @@
 <template>
   <div>
     <el-button type="primary" @click="handleadd" size="mini">添加</el-button>
-    <div style="float: right">
-      <el-input
-        v-model="sreach"
-        placeholder="请输入内容"
-        style="width: 300px; margin-right: 10px"
-        size="mini"
-      ></el-input>
-      <el-button type="primary" size="mini" @click="searchitem">查询</el-button>
-    </div>
     <el-table :data="getData" stripe style="width: 100%">
       <el-table-column label="序号" width="60">
         <template slot-scope="scope">
@@ -258,11 +249,6 @@ export default {
       let d = new Date(time);
       let res = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
       return res;
-    },
-    searchitem() {
-      this.Python = this.Python.filter((item) => {
-        return item.user_name == this.sreach;
-      });
     },
     getPythonData() {
       let { init, size } = this;

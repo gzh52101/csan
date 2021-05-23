@@ -1,15 +1,6 @@
 <template>
   <div>
     <el-button type="primary" @click="handleadd" size="mini">添加</el-button>
-    <div style="float: right">
-      <el-input
-        v-model="sreach"
-        placeholder="请输入内容"
-        style="width: 300px; margin-right: 10px"
-        size="mini"
-      ></el-input>
-      <el-button type="primary" size="mini" @click="searchitem">查询</el-button>
-    </div>
     <el-table :data="getData" stripe style="width: 100%">
       <el-table-column label="序号" width="60">
         <template slot-scope="scope">
@@ -157,7 +148,6 @@ export default {
       dialogFormVisible: false,
       formLabelWidth: "100px",
       tempimgurl: "",
-      sreach: "",
       init: 0,
       size: 5,
     };
@@ -215,7 +205,6 @@ export default {
           this.updateData[key] = "";
         }
       } else if (flag == "add") {
-        // this.JavaInfo.push(tempitem);
         let payload = {
           url: "http://112.74.35.224:8841/data/5g/inse",
           data: tempitem,
@@ -259,11 +248,6 @@ export default {
       let d = new Date(time);
       let res = d.getFullYear() + "-" + (d.getMonth() + 1) + "-" + d.getDate();
       return res;
-    },
-    searchitem() {
-      this.Python = this.Python.filter((item) => {
-        return item.user_name == this.sreach;
-      });
     },
     getFiveGData() {
       let { init, size } = this;
