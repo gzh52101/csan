@@ -1,0 +1,481 @@
+[{
+  "_id": {
+    "$oid": "60a5ce8330820b3e7c3b88cd"
+  },
+  "comments": "0",
+  "avatarurl": "https://profile.csdnimg.cn/C/1/D/3_weixin_54982249",
+  "user_name": "weixin_54982249",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "0",
+  "recommend": "false",
+  "title": "车地5G传输终端",
+  "url": "https://blog.csdn.net/weixin_54982249/article/details/116980688",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-1.nonecase\"}",
+      "dist_request_id": "1621479030557_42173",
+      "index": "1",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-1.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-1.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "116980688",
+  "nickname": "小螃蟹ya",
+  "style": "text_1",
+  "views": "7",
+  "desc": "FET1046A-C核心板车地通信，是列车高速运行过程中，把车载数据向车站、车辆段、停车场等属地进行及时传输，以实现运营方对乘客状况、列车设备及运行状态、隧道及弓网等情况的监测。FET1046A-C核心板采用NXPLS1046A四核处理器设计， 主频最高 1.8GHz，12层PCB沉金工艺，保证最佳电气性能；源生支持8个1Gbit Ethernet，最高支持2个XFI（10GbE）接口，USB3.0、SATA3.0、PCIe3.0（X4）等高速接口，满足实际应用场景下的高带宽和低延迟的要求。.",
+  "id": "116980688",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478683,
+  "shown_time": "1621478683",
+  "user_url": "https://blog.csdn.net/weixin_54982249",
+  "avatar": "https://profile.csdnimg.cn/C/1/D/1_weixin_54982249"
+},{
+  "_id": {
+    "$oid": "60a5ce8330820b3e7c3b88ce"
+  },
+  "comments": "0",
+  "avatarurl": "https://profile.csdnimg.cn/7/5/3/3_long_shaoye",
+  "user_name": "long_shaoye",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "0",
+  "recommend": "false",
+  "title": "当下可为未来可期，佰马与您相约2021光亚展",
+  "url": "https://blog.csdn.net/long_shaoye/article/details/116986034",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-2.nonecase\"}",
+      "dist_request_id": "1621479030557_42173",
+      "index": "2",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-2.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-2.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "116986034",
+  "nickname": "long_shaoye",
+  "style": "text_1",
+  "views": "2",
+  "desc": "智慧杆物联网，当下可为，未来可期。2021年第26届广州国际照明展览会（光亚展），即将于6月9日-6月12日在广州进出口商品交易会展馆盛大开展！佰马科技将携旗舰5G边缘计算网关、智慧路灯杆网关、智能网关、多功能智慧杆管控一体云平台等参展，在5.1馆H61展位恭候您莅临参观交流。2021广州国际照明展，智慧照明产业风向标广州国际照明展，是智慧照明产业和物联网照明应用产业的风向标展会，吸引了全球市场上创新性与先进性兼具的智慧照明、物联网照明行业产品。智能化...",
+  "id": "116986034",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478683,
+  "shown_time": "1621478683",
+  "user_url": "https://blog.csdn.net/long_shaoye",
+  "avatar": "https://profile.csdnimg.cn/7/5/3/1_long_shaoye"
+},{
+  "_id": {
+    "$oid": "60a5ce8330820b3e7c3b88cf"
+  },
+  "comments": "0",
+  "avatarurl": "https://profile.csdnimg.cn/4/9/0/3_weixin_57986667",
+  "user_name": "weixin_57986667",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "0",
+  "recommend": "false",
+  "title": "江苏省信息通信业去年&ldquo;成绩单&rdquo;发布",
+  "url": "https://blog.csdn.net/weixin_57986667/article/details/116988003",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-3.nonecase\"}",
+      "dist_request_id": "1621479030557_42173",
+      "index": "3",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-3.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-3.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "116988003",
+  "nickname": "软件开发小胡",
+  "style": "text_1",
+  "views": "4",
+  "desc": "江苏省信息通信业去年“成绩单”发布5月17日，世界电信与信息社会日，省通信管理局发布信息通信业去年“成绩单”。至今年3月底，全省5G在网用户数达1244.1万。去年，全省完成5G建设投资123亿元，基本实现各市县主城区和重点中心镇5G网络全覆盖。今年，全省将加快5G和千兆光网覆盖，推进5G网络共建共享，力争新建超过6.5万个5G基站。目前，全省已启动“5G+工业互联网”内网改造项目206个，实现5G签约项目1143项。下一步，省通信管理局将以苏州工业园区等重点园区为切入点，着力打造.",
+  "id": "116988003",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478683,
+  "shown_time": "1621478683",
+  "user_url": "https://blog.csdn.net/weixin_57986667",
+  "avatar": "https://profile.csdnimg.cn/4/9/0/1_weixin_57986667"
+},{
+  "_id": {
+    "$oid": "60a5ce8330820b3e7c3b88d0"
+  },
+  "comments": "3",
+  "avatarurl": "https://profile.csdnimg.cn/B/7/3/3_andy_haiying",
+  "user_name": "andy_haiying",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "0",
+  "recommend": "false",
+  "title": "5G覆盖最佳，反诈安全平台，智能城市网络&hellip;&hellip;",
+  "url": "https://blog.csdn.net/andy_haiying/article/details/116943279",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-4.nonecase\"}",
+      "dist_request_id": "1621479030557_42173",
+      "index": "4",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-4.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-4.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "116943279",
+  "nickname": "andy_haiying",
+  "style": "text_1",
+  "views": "284",
+  "desc": "因5G实力圈粉的杭州移动又出大招日前，浙江移动杭州分公司召开“数智杭州”生态合作伙伴大会，联合产业链上下游合作伙伴发布“千帆”合作伙伴计划，以“一流的数字生态 一流的产业平台 一流的创新载体”为目标，共同推动杭州数字化改革发展。数智时代，风起云涌。近年来杭州移动通过5G赋能的“未来工厂”圈粉不少，收获无数“转评赞”。比如助力老板电器从“千人工厂”发展为“无人工厂”，成为国内首家5G全覆盖的“未来工厂”；助力春风动力 “未来工厂”实现了“硬核产品，柔性制造”；助力汉帛国际从容应对“小单快跑”.",
+  "id": "116943279",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478683,
+  "shown_time": "1621478683",
+  "user_url": "https://blog.csdn.net/andy_haiying",
+  "avatar": "https://profile.csdnimg.cn/B/7/3/1_andy_haiying"
+},{
+  "_id": {
+    "$oid": "60a5ce8330820b3e7c3b88d1"
+  },
+  "comments": "1",
+  "avatarurl": "https://profile.csdnimg.cn/5/8/2/3_fiber_naddod",
+  "user_name": "fiber_naddod",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "0",
+  "recommend": "false",
+  "title": "光模块之数通市场代际更迭，100G需求恢复，400G蓄势待发",
+  "url": "https://blog.csdn.net/fiber_naddod/article/details/116995959",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-5.nonecase\"}",
+      "dist_request_id": "1621479030557_42173",
+      "index": "5",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-5.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-5.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "116995959",
+  "nickname": "维维895",
+  "style": "text_1",
+  "views": "4",
+  "desc": "光模块主要应用领域有两大块，一个是电信市场，比如当前正在大力建设的5G领域，一个是数通市场，即数据中心信息传输方面。值得注意的是，由于5G网络带来流量和速率的提升，对光模块速率的要求也相应提高，无线前传部分将从10G升级到25G，城域网从10G、40G升级到100G，骨干网从100G升级到400G。另外，随着云计算、边缘计算的兴起带动超大规模数据中心与小型数据中心建设，以及数据中心叶脊网络架构带来横向连接需求的增加，数通光模块需求逐年提升。且数通光模块将从100G的主流方案进化为400G的主流方案，未来数",
+  "id": "116995959",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478683,
+  "shown_time": "1621478683",
+  "user_url": "https://blog.csdn.net/fiber_naddod",
+  "avatar": "https://profile.csdnimg.cn/5/8/2/1_fiber_naddod"
+},{
+  "_id": {
+    "$oid": "60a5ce8330820b3e7c3b88d2"
+  },
+  "comments": "4",
+  "avatarurl": "https://profile.csdnimg.cn/C/C/D/3_hiwangwenbing",
+  "user_name": "HiWangWenBing",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "1",
+  "recommend": "false",
+  "title": "[4G&amp;5G专题-107]：部署 - LTE无线网络覆盖的规划、覆盖问题与应对措施",
+  "url": "https://blog.csdn.net/HiWangWenBing/article/details/116803357",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-6.nonecase\"}",
+      "dist_request_id": "1621479030557_42173",
+      "index": "6",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-6.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-6.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "116803357",
+  "nickname": "文火冰糖的硅基工坊",
+  "style": "text_1",
+  "views": "613",
+  "desc": "第1章 覆盖规划前的准备1.1 确定覆盖的场景不同的覆盖场景，其无线信道的模型是不一样的，终端的移动速度要求也不一样。无线信道的模型，决定了无线信号的衰减。1.2 覆盖率要求第2章 覆盖规划的基本步骤2.1覆盖规划的基本思想计算出每个基站的覆盖面积S_cell，然后使用总的覆盖面积需求S_total。然后求出基站的个数=S_total/S_cell。当然，还需要考虑一定的冗余量。而基站的覆盖范围：主要取决于基站的发射功率、信号的传输路径损耗...",
+  "id": "116803357",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478683,
+  "shown_time": "1621478683",
+  "user_url": "https://blog.csdn.net/HiWangWenBing",
+  "avatar": "https://profile.csdnimg.cn/C/C/D/1_hiwangwenbing"
+},{
+  "_id": {
+    "$oid": "60a5ce8330820b3e7c3b88d3"
+  },
+  "comments": "3",
+  "avatarurl": "https://profile.csdnimg.cn/D/2/5/3_auz3y0gqma",
+  "user_name": "AUZ3y0GqMa",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "0",
+  "recommend": "false",
+  "title": "OPPO系可能已在手机市场击败小米，双方又在汽车市场怼上",
+  "url": "https://blog.csdn.net/AUZ3y0GqMa/article/details/116955788",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-7.nonecase\"}",
+      "dist_request_id": "1621479030557_42173",
+      "index": "7",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-7.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-7.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "116955788",
+  "nickname": "柏颖漫谈",
+  "style": "text_1",
+  "views": "2",
+  "desc": "有传闻指OPPO已在筹划发展汽车业务，而此前小米已宣布成立汽车业务部门，这意味着两家企业将在汽车赛道成为对手，而OPPO和它的兄弟realme可能已在智能手机市场击败小米，两家企业开始从手...",
+  "id": "116955788",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478683,
+  "shown_time": 1267200000,
+  "user_url": "https://blog.csdn.net/AUZ3y0GqMa",
+  "avatar": "https://profile.csdnimg.cn/D/2/5/1_auz3y0gqma"
+},{
+  "_id": {
+    "$oid": "60a5ce8330820b3e7c3b88d4"
+  },
+  "comments": "3",
+  "avatarurl": "https://profile.csdnimg.cn/7/8/F/3_levet",
+  "user_name": "Levet",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "0",
+  "recommend": "false",
+  "title": "5G学习总结：NR的物理层过程",
+  "url": "https://blog.csdn.net/Levet/article/details/116905258",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-8.nonecase\"}",
+      "dist_request_id": "1621479030557_42173",
+      "index": "8",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-8.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-8.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "116905258",
+  "nickname": "谁曾见过风-",
+  "style": "text_1",
+  "views": "593",
+  "desc": "NR的物理层过程包括初始小区搜索过程、随机接入过程、波束管理过程和UE上报CSI的过程等。一、初始小区搜索过程重点是确定CORESET 0在时频域上的位置与确定初始BWP在时频域上的位置。SS/PBCH块上的每个比特都含有至关重要的信息，并且在时频位置上也包含了关键的信息。二、随机接入过程主要包括四个Msg，重点是SSB波束和PRACH波束之间的关联。三、波束管理过程是NR新引入的过程，主要目的是解决窄的上下行波束的配对问题，包括波束扫描、波束测量、波束报告、波束指示、波束恢复等过程。四、U",
+  "id": "116905258",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478683,
+  "shown_time": null,
+  "user_url": "https://blog.csdn.net/Levet",
+  "avatar": "https://profile.csdnimg.cn/7/8/F/1_levet"
+},{
+  "_id": {
+    "$oid": "60a5ce8330820b3e7c3b88d5"
+  },
+  "comments": "3",
+  "avatarurl": "https://profile.csdnimg.cn/F/6/5/3_weixin_42162451",
+  "user_name": "weixin_42162451",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "0",
+  "recommend": "false",
+  "title": "Fiddler之模拟弱网测试",
+  "url": "https://blog.csdn.net/weixin_42162451/article/details/116897336",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-9.nonecase\"}",
+      "dist_request_id": "1621479030557_42173",
+      "index": "9",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-9.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-9.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "116897336",
+  "nickname": "青春无限坑！",
+  "style": "text_1",
+  "views": "558",
+  "desc": "这里使用的fiddler工具至于fidder网络代理设置就不多说了模拟网速：1、启动Fiddler，打开菜单栏Rules---Performances---Simulate Modem Speeds这里打开了模拟调节速度2、启动fiddler找到Rules---Customize Rules点击打开3、FiddlerScript中，设置上下行速度弹出来了Fiddler Script页面，找到以下代码进行修改 if (m_SimulateModem) {     // D",
+  "id": "116897336",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478683,
+  "shown_time": "1621478683",
+  "user_url": "https://blog.csdn.net/weixin_42162451",
+  "avatar": "https://profile.csdnimg.cn/F/6/5/1_weixin_42162451"
+},{
+  "_id": {
+    "$oid": "60a5ce8330820b3e7c3b88d6"
+  },
+  "comments": "5",
+  "avatarurl": "https://profile.csdnimg.cn/F/C/F/3_haastech",
+  "user_name": "HaaSTech",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "41",
+  "recommend": "false",
+  "title": "不看这几篇好文，就别说自己了解物联网",
+  "url": "https://blog.csdn.net/HaaSTech/article/details/116595714",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-10.nonecase\"}",
+      "dist_request_id": "1621479030557_42173",
+      "index": "10",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-10.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-10.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "116595714",
+  "nickname": "HaaS技术社区",
+  "style": "text_1",
+  "views": "784",
+  "desc": "物联网发展趋势分享【0510】国产物联网操作系统的出路在哪里？【0510】RISC-V架构能否引领物联网时代？【0509】物联网到底为什么这么火？【0509】谁才是物联网连接技术中的王者？【0508】物联网平台大量出现能否将行业带入爆发式发展【0508】脚本语言适合物联网开发吗【0507】从“嵌入式”到“物联网”的四大转变【0507】物联网发展新趋势...",
+  "id": "116595714",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478683,
+  "shown_time": 1958400000,
+  "user_url": "https://blog.csdn.net/HaaSTech",
+  "avatar": "https://profile.csdnimg.cn/F/C/F/1_haastech"
+}]

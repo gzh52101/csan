@@ -1,0 +1,433 @@
+[{
+  "_id": {
+    "$oid": "60a5ceb630820b3e7c3b88d7"
+  },
+  "comments": "0",
+  "avatarurl": "https://profile.csdnimg.cn/3/B/2/3_qm5132",
+  "user_name": "qm5132",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "1",
+  "recommend": "false",
+  "title": "MSE、OLS、MLE辨析和python实现",
+  "url": "https://blog.csdn.net/qm5132/article/details/117002267",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-1.nonecase\"}",
+      "dist_request_id": "1621479052654_76155",
+      "index": "1",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-1.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-1.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "117002267",
+  "nickname": "kelly学挖掘",
+  "style": "text_1",
+  "views": "18",
+  "desc": "统计机器学习是一种基于统计理论的机器学习方法，理解MLE、OLS、MSE对于基本功非常重要。1、MSE、OLS、MLE的定义均方误差MSEMSE是Mean Squared Error缩写，一般用于衡量预测值和真实值之间的差异，属于一种具体的计算函数。普通最小二乘法OLSOrdinary Least Squares的缩写，一般用于线性模型，通过最小化数据集各个样本预测值和真实值之间的均方误差之和，来预估线性模型的参数，属于一种数学优化技术。极大似然估计MLE...",
+  "id": "117002267",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478705,
+  "shown_time": "1621478705",
+  "user_url": "https://blog.csdn.net/qm5132",
+  "avatar": "https://profile.csdnimg.cn/3/B/2/1_qm5132"
+},{
+  "_id": {
+    "$oid": "60a5ceb630820b3e7c3b88d8"
+  },
+  "comments": "51",
+  "avatarurl": "https://profile.csdnimg.cn/4/1/1/3_qq_43965708",
+  "user_name": "qq_43965708",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "39",
+  "recommend": "false",
+  "title": "Python opencv医学处理",
+  "url": "https://blog.csdn.net/qq_43965708/article/details/116572109",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-2.nonecase\"}",
+      "dist_request_id": "1621479052654_76155",
+      "index": "2",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-2.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-2.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "116572109",
+  "nickname": "Dream丶Killer",
+  "style": "text_1",
+  "views": "4338",
+  "desc": "题目描述利用opencv或其他工具编写程序实现医学处理。实现过程# -*- coding: utf-8 -*-'''作者 : 丁毅开发时间 : 2021/5/9 16:30'''import cv2import numpy as np# 图像细化def VThin(image, array):    rows, cols = image.shape    NEXT = 1    for i in range(rows):        for j in range(col",
+  "id": "116572109",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478705,
+  "shown_time": "1621478705",
+  "user_url": "https://blog.csdn.net/qq_43965708",
+  "avatar": "https://profile.csdnimg.cn/4/1/1/1_qq_43965708"
+},{
+  "_id": {
+    "$oid": "60a5ceb630820b3e7c3b88d9"
+  },
+  "comments": "33",
+  "avatarurl": "https://profile.csdnimg.cn/7/9/2/3_cuihao1995",
+  "user_name": "cuihao1995",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "76",
+  "recommend": "false",
+  "title": "基于深度学习的手部21类关键点检测",
+  "url": "https://blog.csdn.net/cuihao1995/article/details/116379902",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-3.nonecase\"}",
+      "dist_request_id": "1621479052654_76155",
+      "index": "3",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-3.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-3.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "116379902",
+  "nickname": "踟蹰横渡口,彳亍上滩舟。",
+  "style": "text_1",
+  "views": "18291",
+  "desc": "基于深度学习的手部21类关键点检测开发环境* Python 3.7  * PyTorch &gt;= 1.5.1  * opencv-python 数据源普通USB彩色（RGB）网络摄像头已经存储下来的视频或者图片数据集本项目数据集百度网盘下载地址：下载地址该数据集包括网络图片及数据集&lt;&lt;Large-scale Multiview 3D Hand Pose Dataset&gt;&gt;筛选动作重复度低的部分图片，进行制作(如有侵权请联系删除)，共49062个样本。&",
+  "id": "116379902",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478705,
+  "shown_time": "1621478705",
+  "user_url": "https://blog.csdn.net/cuihao1995",
+  "avatar": "https://profile.csdnimg.cn/7/9/2/1_cuihao1995"
+},{
+  "_id": {
+    "$oid": "60a5ceb630820b3e7c3b88da"
+  },
+  "comments": "4",
+  "avatarurl": "https://profile.csdnimg.cn/3/5/6/3_qq_18298049",
+  "user_name": "qq_18298049",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "6",
+  "recommend": "false",
+  "title": "python3+selenium4自动化测试环境搭建-基础篇1",
+  "url": "https://blog.csdn.net/qq_18298049/article/details/117001377",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-4.nonecase\"}",
+      "dist_request_id": "1621479052654_76155",
+      "index": "4",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-4.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-4.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "117001377",
+  "nickname": "Tester_谜城",
+  "style": "text_1",
+  "views": "239",
+  "desc": "1、环境准备1.1、所需环境列表-- Python3-- selenium4 for python-- pycharm-- Selenium 在不同浏览器上的driver插件1.2、安装和配置Python3下载地址：https://www.python.org/downloads/根据自己的操作系统，选中要下载的python版本下载完成后运行安装，可默认安装，也可自定义安装路径，这里我们使用自定义安装，一路next到选择安装路径后点击安装安装时请勾选Add Python 3.9 to",
+  "id": "117001377",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478705,
+  "shown_time": "1621478705",
+  "user_url": "https://blog.csdn.net/qq_18298049",
+  "avatar": "https://profile.csdnimg.cn/3/5/6/1_qq_18298049"
+},{
+  "_id": {
+    "$oid": "60a5ceb630820b3e7c3b88db"
+  },
+  "comments": "2",
+  "avatarurl": "https://profile.csdnimg.cn/9/2/F/3_qq_43710889",
+  "user_name": "qq_43710889",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "4",
+  "recommend": "false",
+  "title": "LeetCode：1442. 形成两个异或相等数组的三元组数目",
+  "url": "https://blog.csdn.net/qq_43710889/article/details/117003010",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-5.nonecase\"}",
+      "dist_request_id": "1621479052654_76155",
+      "index": "5",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-5.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-5.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "117003010",
+  "nickname": "南岸青栀*",
+  "style": "text_1",
+  "views": "81",
+  "desc": "1442. 形成两个异或相等数组的三元组数目法1：四重循环python超时class Solution:    def countTriplets(self, arr: List[int]) -&gt; int:        count = 0        #暴力法        for i in range(len(arr)):            for j in range(i+1,len(arr)):                for k in range(j,len(",
+  "id": "117003010",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478705,
+  "shown_time": "1621478705",
+  "user_url": "https://blog.csdn.net/qq_43710889",
+  "avatar": "https://profile.csdnimg.cn/9/2/F/1_qq_43710889"
+},{
+  "_id": {
+    "$oid": "60a5ceb630820b3e7c3b88dc"
+  },
+  "comments": "1",
+  "avatarurl": "https://profile.csdnimg.cn/7/E/D/3_qq_36257407",
+  "user_name": "qq_36257407",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "0",
+  "recommend": "false",
+  "title": "centos7上安装python3.6踩坑分析以及解决办法",
+  "url": "https://blog.csdn.net/qq_36257407/article/details/117001950",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-6.nonecase\"}",
+      "dist_request_id": "1621479052654_76155",
+      "index": "6",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-6.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-6.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "117001950",
+  "nickname": "LinMoson",
+  "style": "text_1",
+  "views": "24",
+  "desc": "这是一个踩坑路线图，中间因为某些错误的指引，浪费了我很久时间，气得我我特意实名认证了去下面评论对方方法不行。比如网上说的：推荐用yum安装https://cloud.tencent.com/developer/article/1566881最后这步会报错easy_install-3.6 pip我没耐心去帮他找解决办法，因为我在另外一篇帖子里的结尾看到了强烈不推荐用yum安装https://blog.csdn.net/zlc1990628/article/details/96148011这篇",
+  "id": "117001950",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478705,
+  "shown_time": "1621478705",
+  "user_url": "https://blog.csdn.net/qq_36257407",
+  "avatar": "https://profile.csdnimg.cn/7/E/D/1_qq_36257407"
+},{
+  "_id": {
+    "$oid": "60a5ceb630820b3e7c3b88dd"
+  },
+  "comments": "1",
+  "avatarurl": "https://profile.csdnimg.cn/F/7/D/3_jn10010537",
+  "user_name": "jn10010537",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "0",
+  "recommend": "false",
+  "title": "【C  】5-1.8 友元",
+  "url": "https://blog.csdn.net/jn10010537/article/details/117002848",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-7.nonecase\"}",
+      "dist_request_id": "1621479052654_76155",
+      "index": "7",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-7.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-7.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "117002848",
+  "nickname": "jn10010537",
+  "style": "text_1",
+  "views": "24",
+  "desc": "【C  】5-1.8 友元1、友元2、为何需要友元3、示例1、友元友元是一种定义在类外部的普通函数或类，但它需要在class类里进行声明，为了与该类的成员函数加以区别，在说明时前面加以关键字friend。友元不是成员函数，但是它可以访问类中的私有（private）成员和保护（protected）成员。友元可以是一个函数，该函数被称为友元函数；友元也可以是一个类，该类被称为友元类，在这种情况下，整个类及其所有成员都是友元；2、为何需要友元私有成员无法从类外访问，但可以给可信的函数和类授权（即变成",
+  "id": "117002848",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478705,
+  "shown_time": 1958400000,
+  "user_url": "https://blog.csdn.net/jn10010537",
+  "avatar": "https://profile.csdnimg.cn/F/7/D/1_jn10010537"
+},{
+  "_id": {
+    "$oid": "60a5ceb630820b3e7c3b88de"
+  },
+  "comments": "6",
+  "avatarurl": "https://profile.csdnimg.cn/D/8/7/3_u011436427",
+  "user_name": "u011436427",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "0",
+  "recommend": "false",
+  "title": "（P13）元组：戴上了枷锁的列表",
+  "url": "https://blog.csdn.net/u011436427/article/details/117002959",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-8.nonecase\"}",
+      "dist_request_id": "1621479052654_76155",
+      "index": "8",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-8.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-8.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "117002959",
+  "nickname": "简单生活，简单爱",
+  "style": "text_1",
+  "views": "12",
+  "desc": "文章目录1.元组1.元组元组是不能随意插入和删除一个元素的，元组是不可改变的，和字符串一样由于和列表是近亲关系，所以元组和列表在实际使用上是非常相似的创键和访问一个元组创建元组（括号可以没有，但逗号一定要有）访问元组前两个元素元组的拷贝创建空元组，创建只有一个元素的元组请注意加一个逗号注意，不能更改元组中的元素更新和删除一个元组（1）只能利用类似字符串的切片的方式间接的删除一个元素： 其并未对原元组进行修改，而是生成了一个新的元组，并贴上temp名字标签",
+  "id": "117002959",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478705,
+  "shown_time": null,
+  "user_url": "https://blog.csdn.net/u011436427",
+  "avatar": "https://profile.csdnimg.cn/D/8/7/1_u011436427"
+},{
+  "_id": {
+    "$oid": "60a5ceb630820b3e7c3b88df"
+  },
+  "comments": "0",
+  "avatarurl": "https://profile.csdnimg.cn/4/4/3/3_m0_52699073",
+  "user_name": "m0_52699073",
+  "recommend_type": "ali",
+  "created_at": "01月01日",
+  "focus": false,
+  "digg": "3",
+  "recommend": "false",
+  "title": "《Python编程从入门到实践》&mdash;&mdash;学习python的第十七天",
+  "url": "https://blog.csdn.net/m0_52699073/article/details/117003056",
+  "tags": [],
+  "product_type": "blog",
+  "report_data": {
+    "eventClick": true,
+    "data": {
+      "mod": "popu_459",
+      "extra": "{\"utm_medium\":\"distribute.pc_category.none-task-blog-hot-9.nonecase\"}",
+      "dist_request_id": "1621479052654_76155",
+      "index": "9",
+      "strategy": "hot"
+    },
+    "urlParams": {
+      "utm_medium": "distribute.pc_category.none-task-blog-hot-9.nonecase",
+      "depth_1-utm_source": "distribute.pc_category.none-task-blog-hot-9.nonecase"
+    },
+    "eventView": true
+  },
+  "product_id": "117003056",
+  "nickname": "小清高class",
+  "style": "text_1",
+  "views": "28",
+  "desc": "python学习第17天",
+  "id": "117003056",
+  "type": "blog",
+  "category_id": "none",
+  "category": "",
+  "isPlan": false,
+  "strategy_id": "none",
+  "strategy": "其它",
+  "tace_code": "",
+  "shown_offset": 1621478705,
+  "shown_time": "1621478705",
+  "user_url": "https://blog.csdn.net/m0_52699073",
+  "avatar": "https://profile.csdnimg.cn/4/4/3/1_m0_52699073"
+}]
