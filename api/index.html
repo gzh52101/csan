@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>0</h1>
+    <input type="file" class="f1">
+    <button class="but">上传文件</button>
+</body>
+<script>
+let xm =new XMLHttpRequest()
+let fdata=new FormData()
+    let fl =document.querySelector('.f1')
+    let but =document.querySelector('.but')
+    // fl.onchange=function(){
+        but.onclick=function(){
+        let data ={dbteb:'dataPython',init:0,end:2}
+        // console.log(fl.files[0])
+        fdata.append('fl',fl.files[0])
+        // fdata.append('name',JSON.stringify(data))
+        xm.open('get','http://localhost:8841/data/all',true);
+        // xm.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+        // xm.send(JSON.stringify(data))
+        xm.send()
+            xm.onload=function(){
+                console.log(xm)
+            }
+    }
+    // xm.open('post','http://112.74.35.224:8233/dl.php');
+    // xm.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    // xm.send(JSON.stringify(a))
+    // xm.onload=function(){
+    //     console.log(xm)
+    // }
+</script>
+</html>

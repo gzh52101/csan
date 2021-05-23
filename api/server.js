@@ -24,7 +24,7 @@ app.use('/data',dataRuote)
 app.use('/fabu',Fabu)
 
 app.use((req,res)=>{
-    
+
     res.send('<h1>你访问的页面不存在 404</h1>')
 })
 
