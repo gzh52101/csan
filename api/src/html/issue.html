@@ -1,12 +1,413 @@
 <!DOCTYPE html>
 <html lang="en">
+<link rel="stylesheet" href="../../public/emigr/iconfont.css">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>发布</title>
+    <style>
+        li {
+            list-style: none;
+        }
+
+        html,
+        body {
+            height: 100%;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .da-d1 {
+            width: 100%;
+            /* display: none; */
+        }
+
+        .da-foot {
+            position: fixed;
+            bottom: 0;
+            height: 3em;
+            border-top: 1px solid;
+            width: 100%;
+            background-color: #fff;
+        }
+
+        .ic {
+            line-height: 49px;
+            padding: 0 5px;
+        }
+
+        .da-herd {
+            height: 8em;
+            width: 100%;
+            border-bottom: 1px solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .da-herd p {
+            margin: 5px 5px;
+        }
+
+        .da-herd .her {
+            display: flex;
+            justify-content: space-between;
+            background-color: #eeeeee;
+            margin: 0;
+            padding: 5px 5px;
+
+        }
+
+        .da-herd input {
+            width: 100%;
+            border: 0;
+            border-top: 1px solid;
+            height: 2em;
+            outline: none;
+        }
+
+
+        .da-herd .plate span {
+            background-color: #00bcd4;
+            border-radius: 5px;
+            padding: 2px;
+            color: #fff;
+        }
+
+        .da-main {
+            padding-top: 10px;
+            /* min-height: 500px; */
+        }
+
+        .da-herd .icon-fabu {
+            font-size: 24px;
+        }
+
+        .da-main .da-redact {
+            height: 100%;
+            /* min-height: 200px; */
+            /* max-height: 500px; */
+            overflow: auto;
+            padding: 2px;
+            outline: none;
+            background-color: #d5d7d852;
+        }
+
+        .clickBlk-1 {
+            display: none;
+
+            /* opacity: 0; */
+            border-radius: 5px 5px 0 0;
+            height: 60%;
+            width: 100%;
+            position: absolute;
+            background-color: #928e8b;
+            top: 40%;
+            box-shadow: 0px 0px 8px -3px;
+            z-index: 90;
+        }
+
+        .clickBlk-2 {
+            display: none;
+            top: 0;
+            /* opacity: 0; */
+            background-color: #f0f0f0;
+            width: 0%;
+            height: 100%;
+            position: absolute;
+            left: 100%;
+            animation: dh-1 .5s forwards;
+            z-index: 91;
+        }
+
+        .clickBlk-2 p {
+            height: 65px;
+            background-color: #bfbfb5;
+            border-bottom: 1px solid;
+            margin: 0;
+            text-align: center;
+            line-height: 65px;
+        }
+
+        .da-table {
+            padding: 0;
+            height: calc(100% - 100px);
+            overflow: auto;
+        }
+
+        .da-table li {
+            background-color: rgb(230 107 107);
+            text-align: center;
+            margin: 10px 0;
+            padding: 5px;
+            border-radius: 5px;
+        }
+
+        #fl {
+            display: none;
+        }
+
+        .alt {
+            display: none;
+            width: 90%;
+            height: 50px;
+            background-color: #fcf8e3;
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            z-index: 99;
+            border-radius: 5px;
+            text-align: center;
+            animation: dh-2 2.6s forwards;
+        }
+
+        .da-redact img {
+            /* margin: 0 25%; */
+            width: 100%;
+            height: 80%;
+        }
+
+        .da-redact div {
+            min-height: 20px;
+        }
+
+        @keyframes dh-1 {
+            100% {
+                width: 26%;
+                left: 74%;
+            }
+        }
+
+        @keyframes dh-2 {
+            0% {
+                top: 0;
+                opacity: 1;
+            }
+
+            10% {
+                top: 5%;
+                opacity: 1;
+            }
+
+            90% {
+                top: 5%;
+                opacity: 1;
+            }
+
+            100% {
+                /* top: 0; */
+                /* display: none; */
+                opacity: 0;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    
+    <input type="file" name="" id="fl">
+    <div class="da-d1">
+        <div class="da-herd">
+            <p class="her">
+                <span class="iconfont icon-fanhui" id="fanhui">
+                </span><strong>发布帖子</strong>
+                <span class="iconfont icon-fabu" id="fabu"></span>
+                <!-- <button>发布</button> -->
+            </p>
+            <p class="plate"><span id="xuanz">选择板块></span></p>
+            <input type="text" class="da-title" placeholder="添加一个标题">
+        </div>
+        <div class="da-main">
+            <div class="da-redact" contenteditable id="doc"></div>
+        </div>
+        <div class="da-foot">
+            <div class="ic">
+                <span class="iconfont icon-tupian" id="img"></span>
+                <!-- <span class="iconfont icon-biaoqing" id="emi"></span> -->
+            </div>
+        </div>
+    </div>
+    <div class="clickBlk-1"></div>
+    <div class="clickBlk-2">
+        <p>所有板块</p>
+        <ul class="da-table">
+            <li class="dataJava">java</li>
+            <li class="data5g">5g</li>
+            <!-- <li>444</li> -->
+
+        </ul>
+    </div>
+    <div class="alt">
+        <p></p>
+    </div>
 </body>
+<script>
+    let url_1='http://112.74.35.224:8841'
+    let reda = docQu('.da-redact');
+    let xm = new XMLHttpRequest();
+    let img_Url = new FileReader();
+    let froD = new FormData();
+    let daHer = docQu('.da-d1')
+    let cl2 = docQu('.clickBlk-2');
+    let fl = docQu('#fl');
+    let alt = docQu('.alt')
+    let tebUl = docQu('.da-table')
+    let tib = docQu('.da-title')
+    let imgAll = {}
+    let imgIdex = 1
+    let ndNa = null;
+    let redData = ''
+    let tarGtnode
+    let bk = false
+    docBody(reda, 190)
+    document.body.onresize = function (e) {
+        docBody(reda, 190)
+    }
+    // let StGt = {
+    //     get da() {
+
+    //     },
+    //     set da(e) {
+
+    //     }
+    // }
+    let ddd = ''
+    daHer.onclick = function (e) {
+        switch (e.target.id) {
+            case 'fanhui':
+
+                break;
+            case 'fabu':
+                //打包数据
+                if (tib.value != '' && reda.childNodes.length > 0) {
+                    console.log(tarGtnode.className)
+                    if (bk && tarGtnode.className != '') {
+                        let inde = 1
+                        reda.childNodes.forEach((itm) => {
+                            if (itm.nodeName == '#text') {
+                                redData += itm.nodeValue
+                            }
+                            if (itm.nodeName == 'DIV') {
+                                redData += itm.outerHTML
+                            }
+                            if (itm.nodeName == 'IMG') {
+                                // console.log()
+                                froD.append('img', imgAll[itm.id])
+                                redData += '<img />'
+                                inde++
+                            }
+                        });
+                        froD.set('tim',Date.now())
+                        froD.set('desc_1', redData)
+                        froD.set('title', tib.value)
+                        // 开始上次
+                        // console.log('ajx')
+                        ajx(froD,url_1+'/fabu?username=aaa')
+                    } else {
+                        Alet('请选择一个版块！')
+                    }
+                } else {
+                    Alet('标题或内容不能为空!')
+                }
+                break;
+            case 'xuanz':
+                if (cl2.style.display == 'block') {
+                    cl2.style.display = 'none';
+                } else {
+                    cl2.style.display = 'block';
+                }
+                tarGtnode = e.target
+                break;
+            case 'img':
+                fl.click()
+                fl.onchange = function () {
+                    if (fl.files[0].type.includes("image") && fl.files[0].size <= 2000000) {
+                        let nod_img = document.createElement('img');
+                        let img_div = document.createElement('div');
+                        img_Url.readAsDataURL(fl.files[0])
+
+                        img_Url.onload = function () {
+
+                            nod_img.src = this.result;
+
+                            imgAll['img' + imgIdex] = fl.files[0];
+                            nod_img.id = 'img' + imgIdex;
+                            if (reda.children.length > 0 && ndNa != null) {
+                                reda.insertBefore(nod_img, ndNa.nextElementSibling)
+                                reda.appendChild(img_div)
+                                ndNa = null;
+                            } else {
+                                reda.appendChild(nod_img)
+                                reda.appendChild(img_div)
+                            }
+                            imgIdex++;
+                        }
+                    } else {
+                        fl.value = ''
+                        Alet()
+                    }
+                }
+                break;
+            default:
+                break;
+        }
+    }
+    ///委托获取光标节点
+    reda.onclick = function (e) {
+        if (e.target.parentNode.id == 'doc' && e.target.nodeName != 'IMG') {
+            ndNa = e.target;
+        }
+    }
+    tebUl.onclick = function (e) {
+        // console.log(e)
+        if (e.target.nodeName == 'LI') {
+            tarGtnode.innerHTML = e.target.innerHTML
+            cl2.style.display = 'none';
+            tarGtnode.className = e.target.className
+            // froD.append('banKuai',e.target.className)
+            froD.set("banKuai", e.target.className);
+            bk=true
+        }
+    }
+    //自适应 获取当前body的高度
+    function docBody(e, v) {
+        if (v) {
+            e.style.height = document.body.offsetHeight - v + 'px'
+        } else {
+            e.style.height = document.body.offsetHeight + 'px'
+        }
+    }
+    //节点简化
+    function docQu(e, v = false) {
+        if (v) {
+            return document.querySelectorAll(e)
+        } else {
+            return document.querySelector(e)
+        }
+    }
+    //弹窗提示
+    function Alet(e) {
+        if (e) {
+            docQu('.alt p').innerHTML = e
+        } else {
+            docQu('.alt p').innerHTML = '图片不正确或图片大于2M!'
+        }
+        alt.style.display = 'block';
+        let dsq = setTimeout(() => {
+            alt.style.display = 'none';
+            clearTimeout(dsq)
+        }, 2600)
+    }
+    //
+    function ajx(e,url) {
+        xm.open('post', url, true)
+        xm.send(e)
+        console.log('444')
+        xm.onload = function () {
+            return xm
+        }
+    }
+</script>
+
 </html>

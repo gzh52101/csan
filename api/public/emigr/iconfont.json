@@ -1,0 +1,58 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2376",
+      "name": "图片",
+      "font_class": "tupian",
+      "unicode": "3502",
+      "unicode_decimal": 13570
+    },
+    {
+      "icon_id": "588708",
+      "name": "发布",
+      "font_class": "fabu",
+      "unicode": "e6ec",
+      "unicode_decimal": 59116
+    },
+    {
+      "icon_id": "1301356",
+      "name": "表情",
+      "font_class": "biaoqing",
+      "unicode": "e659",
+      "unicode_decimal": 58969
+    },
+    {
+      "icon_id": "1840146",
+      "name": "微笑-1",
+      "font_class": "-smiling-",
+      "unicode": "e6f4",
+      "unicode_decimal": 59124
+    },
+    {
+      "icon_id": "2135173",
+      "name": "生气",
+      "font_class": "shengqi",
+      "unicode": "e780",
+      "unicode_decimal": 59264
+    },
+    {
+      "icon_id": "3650981",
+      "name": "开心",
+      "font_class": "kaixin",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "14444998",
+      "name": "返回",
+      "font_class": "fanhui",
+      "unicode": "e72c",
+      "unicode_decimal": 59180
+    }
+  ]
+}
