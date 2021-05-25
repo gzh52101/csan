@@ -45,7 +45,7 @@ router.post('/',(req,res,n)=>{
 })
 
 router.get('/issue',(req,res)=>{
-    let html= fs.readFileSync('./public/index.html')
+    let html= fs.readFileSync('./public/issue.html')
     res.end(html)
 })
 module.exports=router
