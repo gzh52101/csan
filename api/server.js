@@ -24,7 +24,7 @@ app.use('/data',dataRuote)
 
 app.use('/fabu',Fabu)
 
-app.use('/issue')
+// app.use('/issue')
 
 app.use((req,res)=>{
 
