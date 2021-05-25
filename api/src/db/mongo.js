@@ -62,7 +62,7 @@ async function update(e, p) {
                 $set: p.set
             })
     } else if ('user' in p) {
-        ///待定功能
+         ///待定功能
         let key1 = p.user
 
         data = db.collection(e.dbteb).updateOne({

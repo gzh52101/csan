@@ -6,9 +6,8 @@ const multer=require('multer')
 const fs =require('fs')
 const rootuser =require('./src/ruoterdata/rootuser')
 const Fabu =require('./src/file/fabu')
-
+const path =require('path')
 app.use(express.urlencoded({extended: true}));
-
 app.use('/file',file)
 
 app.use('*',(req,res,next)=>{
@@ -18,18 +17,18 @@ app.use('*',(req,res,next)=>{
 
 app.use('/root',rootuser)
 
+// app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static('./public'));
 
 app.use('/data',dataRuote)
 
 app.use('/fabu',Fabu)
 
-// app.use('/issue')
 
-app.use((req,res)=>{
-
-    res.send('<h1>你访问的页面不存在 404</h1>')
-})
+// app.use((req,res)=>{
+    // res.writeHead(200, { 'Content-Type': 'text/html' });
+    // res.send('<h1>你访问的页面不存在 404</h1>')
+// })
 
 app.listen(8841, () => {
     console.log('服务启动成功----8841  ' + new Date())

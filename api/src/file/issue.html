@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="iconfont.css">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>发布</title>
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>发布</title>
+        <link rel="stylesheet" href="../../iconfont.css" type="text/css" />
     <style>
+        
         li {
             list-style: none;
         }
@@ -270,7 +271,7 @@
     daHer.onclick = function (e) {
         switch (e.target.id) {
             case 'fanhui':
-
+                window.location.href="http://112.74.35.224:8841";
                 break;
             case 'fabu':
                 //打包数据
@@ -297,7 +298,19 @@
                         froD.set('title', tib.value)
                         // 开始上次
                         // console.log('ajx')
-                        ajx(froD,url_1+'/fabu?username=aaa')
+                        let us = localStorage.getItem("userInfo");
+
+                        if(us){
+                            let userdata =JSON.parse(us)
+                            if('username' in userdata){
+                                ajx(froD,url_1+`/fabu?username=${userdata.username}`)
+                                window.location.href="http://112.74.35.224:8841";
+                            }else{
+                                Alet('未知错误')
+                            }
+                        }else{
+                            Alet('未知错误')
+                        }
                     } else {
                         Alet('请选择一个版块！')
                     }

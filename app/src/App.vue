@@ -234,7 +234,7 @@ export default {
       console.log(us);
     },
     FBu(){
-      window.location.href="http://112.74.35.224:8841/fabu"
+      window.location.href="http://112.74.35.224:8841/fabu/issue"
     }
   },
   components: {
