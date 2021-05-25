@@ -17,7 +17,6 @@ app.use('*',(req,res,next)=>{
 
 app.use('/root',rootuser)
 
-// app.use(express.static(path.join(__dirname, 'public')))
 app.use(express.static('./public'));
 
 app.use('/data',dataRuote)
@@ -25,10 +24,10 @@ app.use('/data',dataRuote)
 app.use('/fabu',Fabu)
 
 
-// app.use((req,res)=>{
-    // res.writeHead(200, { 'Content-Type': 'text/html' });
-    // res.send('<h1>你访问的页面不存在 404</h1>')
-// })
+app.use((req,res)=>{
+
+    res.send('<h1>你访问的页面不存在 404</h1>')
+})
 
 app.listen(8841, () => {
     console.log('服务启动成功----8841  ' + new Date())
