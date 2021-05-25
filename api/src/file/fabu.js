@@ -44,4 +44,8 @@ router.post('/',(req,res,n)=>{
     res.send({data:data.ops,code:200,res:true})
 })
 
+router.get('/',(req,res)=>{
+    let html= fs.readFileSync('./public/index.html')
+    res.end(html)
+})
 module.exports=router

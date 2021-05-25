@@ -6,6 +6,7 @@ const multer=require('multer')
 const fs =require('fs')
 const rootuser =require('./src/ruoterdata/rootuser')
 const Fabu =require('./src/file/fabu')
+
 app.use(express.urlencoded({extended: true}));
 
 app.use('/file',file)
@@ -22,6 +23,8 @@ app.use(express.static('./public'));
 app.use('/data',dataRuote)
 
 app.use('/fabu',Fabu)
+
+app.use('/issue')
 
 app.use((req,res)=>{
 
